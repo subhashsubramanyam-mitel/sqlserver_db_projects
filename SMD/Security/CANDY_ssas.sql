@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\ssas] FOR LOGIN [CANDY\ssas];
+

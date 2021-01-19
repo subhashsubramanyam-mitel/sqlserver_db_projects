@@ -1,0 +1,2 @@
+﻿CREATE SYNONYM [dbo].[POS_RAW_ING] FOR [dbo].[POS_CI_ING];
+

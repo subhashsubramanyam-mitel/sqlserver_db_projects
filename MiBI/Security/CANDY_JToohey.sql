@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\JToohey] FOR LOGIN [CANDY\JToohey];
+

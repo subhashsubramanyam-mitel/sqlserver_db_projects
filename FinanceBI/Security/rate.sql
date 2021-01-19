@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [rate]
+    AUTHORIZATION [dbo];
+

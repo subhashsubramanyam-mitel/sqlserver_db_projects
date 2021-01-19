@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [Bluewolf]
+    WITH PASSWORD = N'wwkfnfsk1av5argoZeqd~p,bmsFT7_&#$!~<$alloxbHh=rj', SID = 0x02401F2A7418A140AF221A1021A132A7, DEFAULT_DATABASE = [SFDC], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

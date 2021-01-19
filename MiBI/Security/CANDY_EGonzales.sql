@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\EGonzales] FOR LOGIN [CANDY\EGonzales];
+

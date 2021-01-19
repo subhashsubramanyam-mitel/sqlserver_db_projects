@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[SFDC_BILL_BADORDERS] (
+    [BadOrder] NVARCHAR (255) NULL
+);
+

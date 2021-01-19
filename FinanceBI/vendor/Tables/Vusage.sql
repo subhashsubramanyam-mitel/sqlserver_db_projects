@@ -1,0 +1,27 @@
+﻿CREATE TABLE [vendor].[Vusage] (
+    [id]                 INT           NOT NULL,
+    [ban]                VARCHAR (255) NULL,
+    [bill_date]          VARCHAR (255) NULL,
+    [charge_type]        VARCHAR (255) NULL,
+    [from_wtn]           VARCHAR (255) NULL,
+    [to_wtn]             VARCHAR (255) NULL,
+    [usage_type]         VARCHAR (255) NULL,
+    [description]        VARCHAR (255) NULL,
+    [quantity]           VARCHAR (255) NULL,
+    [quantity_type]      VARCHAR (255) NULL,
+    [amount]             VARCHAR (255) NULL,
+    [start_date]         VARCHAR (255) NULL,
+    [end_date]           VARCHAR (255) NULL,
+    [time_of_call]       VARCHAR (255) NULL,
+    [day_eve_night]      VARCHAR (255) NULL,
+    [reference]          VARCHAR (255) NULL,
+    [sub_charge_type]    VARCHAR (255) NULL,
+    [incoming_file_name] VARCHAR (255) NULL,
+    [profile]            VARCHAR (255) NULL,
+    [generated_at]       VARCHAR (255) NULL,
+    [product_id]         VARCHAR (255) NULL,
+    [product_quantity]   VARCHAR (255) NULL,
+    [product_amount]     VARCHAR (255) NULL,
+    [period]             VARCHAR (255) NULL
+);
+

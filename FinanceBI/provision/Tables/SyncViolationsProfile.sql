@@ -1,0 +1,26 @@
+﻿CREATE TABLE [provision].[SyncViolationsProfile] (
+    [ViolationId]          INT             IDENTITY (1, 1) NOT NULL,
+    [RunId]                INT             NULL,
+    [DateCreated]          DATETIME        NULL,
+    [MergeOperation]       CHAR (1)        NULL,
+    [Id]                   INT             NULL,
+    [AccountId]            INT             NULL,
+    [LocationId]           INT             NULL,
+    [ProfileTypeId]        INT             NULL,
+    [TimeZoneId]           INT             NULL,
+    [Name]                 NVARCHAR (1000) NULL,
+    [Tn]                   VARCHAR (1000)  NULL,
+    [TnCountryId]          INT             NULL,
+    [CallerId]             NVARCHAR (1000) NULL,
+    [IsActive]             INT             NULL,
+    [IsDid]                BIT             NULL,
+    [Extension]            NVARCHAR (1000) NULL,
+    [ViolationAccount]     INT             NULL,
+    [ViolationLocation]    INT             NULL,
+    [ViolationProfileType] INT             NULL,
+    [ViolationTimeZone]    INT             NULL,
+    [ViolationTn]          INT             NULL,
+    [ViolationNull]        INT             NULL,
+    CONSTRAINT [PK_SyncViolationsProfile] PRIMARY KEY CLUSTERED ([ViolationId] ASC)
+);
+

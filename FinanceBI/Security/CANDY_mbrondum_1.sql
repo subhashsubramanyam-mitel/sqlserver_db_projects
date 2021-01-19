@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [CANDY\mbrondum]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

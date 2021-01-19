@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[SFDC_POS_AUDIT_03312016] (
+    [RecId]       NVARCHAR (268)   NOT NULL,
+    [NetSalesUSD] NUMERIC (29, 12) NULL
+);
+

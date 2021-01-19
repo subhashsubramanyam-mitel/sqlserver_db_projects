@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[SFDC_BILL_ZOMBIE_INV] (
+    [Created]   DATETIME     CONSTRAINT [DF_SFDC_BILL_ZOMBIE_INV_Created] DEFAULT (getdate()) NULL,
+    [SfdcInvId] VARCHAR (50) NULL
+);
+

@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\DSeto] FOR LOGIN [CANDY\DSeto];
+

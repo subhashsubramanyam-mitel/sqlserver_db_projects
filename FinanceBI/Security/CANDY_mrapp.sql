@@ -1,0 +1,3 @@
+﻿CREATE USER [CANDY\mrapp] FOR LOGIN [CANDY\mrapp]
+    WITH DEFAULT_SCHEMA = [invoice];
+

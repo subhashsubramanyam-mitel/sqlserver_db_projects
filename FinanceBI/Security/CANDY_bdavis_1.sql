@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [CANDY\bdavis]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

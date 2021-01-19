@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[Local_MASTERcommissionsSFDC] (
+    [OrderDate]               DATETIME       NULL,
+    [SalesOrder]              NVARCHAR (20)  NULL,
+    [InvoiceDate]             DATETIME       NULL,
+    [Invoice]                 NVARCHAR (20)  NULL,
+    [PartnerG]                CHAR (255)     NULL,
+    [Partner]                 NVARCHAR (100) NULL,
+    [ImpactNumber]            NVARCHAR (40)  NULL,
+    [EndCust]                 NVARCHAR (40)  NULL,
+    [EndCustName]             CHAR (255)     NULL,
+    [RegionArea]              NVARCHAR (255) NULL,
+    [SalesArea]               NVARCHAR (255) NULL,
+    [OrigSalesArea]           CHAR (30)      NULL,
+    [FiscalQuarterCommission] CHAR (7)       NULL,
+    [CalendarMonthCommission] CHAR (8)       NULL,
+    [MAP]                     CHAR (10)      NULL,
+    [GOV]                     CHAR (10)      NULL,
+    [ShipPostalCode]          NVARCHAR (10)  NULL,
+    [BillingsComp]            FLOAT (53)     NULL,
+    [MgnCompUplifted]         FLOAT (53)     NULL,
+    [EndCustBuild]            CHAR (10)      NULL,
+    [QmsOrderNumber]          NVARCHAR (25)  NULL,
+    [CustomerPo]              NVARCHAR (50)  NULL,
+    [REVtype]                 NVARCHAR (255) NULL,
+    [GOVclass]                CHAR (10)      NULL,
+    [OrderType]               NVARCHAR (10)  NULL
+);
+

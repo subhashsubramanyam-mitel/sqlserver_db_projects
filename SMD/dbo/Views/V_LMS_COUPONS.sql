@@ -1,0 +1,57 @@
+﻿
+
+
+ CREATE VIEW [dbo].[V_LMS_COUPONS] AS
+ -- MW 12282016 for LMS coupon integration. called from Cast iron orch
+  SELECT 
+ "SALESTABLE"."CREATEDDATETIME", 
+ "SALESTABLE"."SALESID", 
+ "SALESTABLE"."PURCHORDERFORMNUM", 
+ "SALESTABLE"."INVOICEACCOUNT",
+ p.NAME as Partner,
+ p.CONFIRMATIONEMAIL,
+ "SALESTABLE"."SEMENDCUST", 
+ e.NAME as Cust,
+  "SALESTABLE"."SEMPOSTINGORDERTYPE", 
+   "SALESLINE"."ITEMID",
+   i.ITEMNAME,
+    "SALESLINE"."SHIPPINGDATECONFIRMED", 
+	 "SALESLINE"."QTYORDERED", 
+	 "SALESLINE"."REMAINSALESPHYSICAL", 
+	   "SALESLINE"."LINEAMOUNT", 
+	   "SALESLINE"."CURRENCYCODE", 
+	   e.salespoolid,
+	    "SALESLINE"."LINEAMOUNT" as USD, 
+		null as Exrt, -- see if needed
+	   null as code,
+	   null as se,
+	   l.Line
+FROM
+ 
+     
+ SVLCORPAXDB1."PROD"."dbo"."SALESLINE" "SALESLINE" INNER JOIN 
+ SVLCORPAXDB1."PROD"."dbo"."SALESTABLE" "SALESTABLE" ON "SALESLINE"."SALESID"="SALESTABLE"."SALESID" inner join
+ SVLCORPAXDB1."PROD"."dbo".CUSTTABLE e on SALESTABLE.SEMENDCUST = e.ACCOUNTNUM inner join
+ SVLCORPAXDB1."PROD"."dbo".CUSTTABLE p on SALESTABLE.INVOICEACCOUNT = p.ACCOUNTNUM inner join
+ SVLCORPAXDB1."PROD"."dbo".INVENTTABLE i on i.ItemId = SalesLine.ItemId inner join
+ LMS_COUPON_TRK l on l.SalesOrder = "SALESTABLE"."SALESID" AND l.Line = "SALESTABLE"."SALESID" +'_' + convert(varchar(5),cast( "SALESLINE".LineNum as int))
+ WHERE   
+ "SALESLINE".SEMPOSTINGORDERTYPE IN(
+'TR',
+'T',
+'N',
+'A',
+'S',
+'GP',
+'I' 
+) AND
+ salestable.SEMPOSTINGORDERTYPE IN(
+'TR',
+'T',
+'N',
+'A',
+'S',
+'GP',
+'I' 
+) 
+and l.Status = 'N'

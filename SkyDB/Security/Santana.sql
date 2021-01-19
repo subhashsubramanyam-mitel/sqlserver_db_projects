@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Santana]
+    AUTHORIZATION [dbo];
+

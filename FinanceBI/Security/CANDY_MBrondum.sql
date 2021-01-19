@@ -1,0 +1,3 @@
+﻿CREATE USER [CANDY\MBrondum] FOR LOGIN [CANDY\mbrondum]
+    WITH DEFAULT_SCHEMA = [ALSandbox];
+

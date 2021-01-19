@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [app_megasilo]
+    WITH PASSWORD = N'wwkfnfskavargo.sPqdpAbalmsFT7_&#$!~<lWhoxbhrjMz7', SID = 0x53BD13D60F176047BB0429623F9F049C, DEFAULT_DATABASE = [MEGASILO], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

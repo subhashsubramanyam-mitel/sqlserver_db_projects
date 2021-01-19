@@ -1,0 +1,26 @@
+﻿CREATE TABLE [cdr].[SpecialCalls] (
+    [Id]               BIGINT          NOT NULL,
+    [AccountId]        INT             NULL,
+    [LichenAccountid]  BIGINT          NOT NULL,
+    [LocationId]       INT             NULL,
+    [LocationName]     NVARCHAR (128)  NOT NULL,
+    [LichenLocationId] BIGINT          NOT NULL,
+    [Tn]               NVARCHAR (15)   NOT NULL,
+    [ProfileId]        BIGINT          NOT NULL,
+    [ProfileName]      NVARCHAR (128)  NOT NULL,
+    [LabelName]        NVARCHAR (64)   NOT NULL,
+    [DialedTN]         VARCHAR (15)    NOT NULL,
+    [ANICity]          VARCHAR (50)    NULL,
+    [ANIState]         VARCHAR (4)     NULL,
+    [CdrCallTypeid]    BIGINT          NULL,
+    [CdrServiceTypeId] BIGINT          NOT NULL,
+    [CdrRegionTypeId]  BIGINT          NOT NULL,
+    [NumCalls]         INT             NOT NULL,
+    [StartTime]        DATETIME        NOT NULL,
+    [EndTime]          DATETIME        NULL,
+    [Minutes]          NUMERIC (26, 6) NULL,
+    [Charge]           FLOAT (53)      NULL,
+    [RateId]           BIGINT          NULL,
+    [ServiceMonth]     DATETIME        NULL
+);
+

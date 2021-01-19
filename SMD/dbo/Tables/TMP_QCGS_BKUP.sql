@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[TMP_QCGS_BKUP] (
+    [ItemId] NVARCHAR (255)  NULL,
+    [QCOGS]  DECIMAL (38, 2) NULL
+);
+

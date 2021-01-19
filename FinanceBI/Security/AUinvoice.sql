@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [AUinvoice]
+    AUTHORIZATION [dbo];
+

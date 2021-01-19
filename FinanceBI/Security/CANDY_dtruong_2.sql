@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [CANDY\dtruong]
+    AUTHORIZATION [CANDY\dtruong];
+

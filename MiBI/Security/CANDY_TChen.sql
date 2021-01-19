@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\TChen] FOR LOGIN [CANDY\TChen];
+

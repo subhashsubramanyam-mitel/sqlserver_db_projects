@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\MegaSilo] FOR LOGIN [CANDY\MegaSilo];
+

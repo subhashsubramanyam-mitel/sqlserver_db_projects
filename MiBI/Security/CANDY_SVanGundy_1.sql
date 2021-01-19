@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [CANDY\SVanGundy]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

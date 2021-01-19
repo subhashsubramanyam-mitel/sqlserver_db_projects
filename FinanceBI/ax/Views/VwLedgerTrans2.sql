@@ -1,0 +1,98 @@
+﻿
+CREATE view [ax].[VwLedgerTrans2]
+as 
+select 
+	LT.ACCOUNTNUM, LT.TRANSDATE, LT.VOUCHER, 
+	REPLACE(REPLACE(LT.TXT, CHAR(10), ''), CHAR(9), '') TXT, 
+	CASE WHEN LT.DIMENSION3_ <> '999'THEN LT.AMOUNTMST ELSE 0.0 END [Cons USD AMT],
+	CASE WHEN LT.DIMENSION3_ <> '999'THEN LT.AMOUNTCUR ELSE 0.0 END [Cons CUR AMT],
+	CASE WHEN LT.DIMENSION3_ = '999'THEN LT.AMOUNTMST ELSE 0.0 END [Trans USD AMT],
+	CASE WHEN LT.DIMENSION3_ = '999'THEN LT.AMOUNTCUR ELSE 0.0 END [Trans CUR AMT],
+	LT.CURRENCYCODE,
+	LT.TRANSTYPE,
+	LT.DIMENSION, 
+	LT.DIMENSION2_,
+	LT.DIMENSION3_,
+	LT.QTY,
+	LT.DOCUMENTDATE,
+	LT.JOURNALNUM,
+	LT.ALLOCATELEVEL,
+	LT.POSTING,
+	LT.CORRECT,
+	LT.CREDITING,
+	LT.DOCUMENTNUM ,
+	LT.PAYMREFERENCE,
+	LT.PERIODCODE,
+	LT.OPERATIONSTAX,
+	LT.THIRDPARTYBANKACCOUNTID,
+	LT.COMPANYBANKACCOUNTID,
+	LT.PAYMMODE,
+	LT.FURTHERPOSTINGTYPE,
+	LT.LEDGERPOSTINGJOURNALID,
+	LT.TAXREFID,
+	LT.CONSOLIDATEDCOMPANY,
+	LT.REASONREFRECID,
+	LT.PROJID_SA, 
+	LT.MODIFIEDDATETIME, LT.MODIFIEDBY, LT.CREATEDDATETIME, LT.CREATEDBY,
+	LT.CREATEDTRANSACTIONID, LT.DATAAREAID, LT.RECVERSION, LT.RECID,
+	ER.Rate, 
+	CASE WHEN LT.DIMENSION3_ <> '999' and 
+		LT.AMOUNTCUR <> 0.0 THEN ER.Rate * LT.AMOUNTCUR 
+		WHEN LT.DIMENSION3_ <> '999' THEN LT.AMOUNTMST 
+		ELSE 0.0 END as [Cons USD Amt @PlanXchg],
+	CASE WHEN LT.DIMENSION3_ = '999' and 
+		LT.AMOUNTCUR <> 0.0 THEN ER.Rate * LT.AMOUNTCUR 
+		WHEN LT.DIMENSION3_ = '999' THEN LT.AMOUNTMST 
+		ELSE 0.0 END as [Trans USD Amt @PlanXchg],
+    CASE 
+		WHEN LT.DIMENSION3_ <> '999' and LT.AMOUNTMST <> 0.0 and LT.AMOUNTCUR = 0.0 THEN 1
+		WHEN LT.DIMENSION3_ = '999' and LT.AMOUNTMST <> 0.0 and LT.AMOUNTCUR = 0.0 THEN 1
+		WHEN LT.DIMENSION3_ <> '999' and LT.AMOUNTMST = 0.0 and LT.AMOUNTCUR <> 0.0 THEN 1
+		WHEN LT.DIMENSION3_ = '999' and LT.AMOUNTMST = 0.0 and LT.AMOUNTCUR <> 0.0 THEN 1
+		WHEN LT.DIMENSION3_ = '999' and LT.CURRENCYCODE <> 'USD' and
+				LT.AMOUNTMST = LT.AMOUNTCUR and LT.AMOUNTMST <> 0.0 THEN 0 -- Ignore
+		WHEN LT.DIMENSION3_ <> '999' and LT.CURRENCYCODE <> 'USD' and
+				LT.AMOUNTMST = LT.AMOUNTCUR and LT.AMOUNTMST <> 0.0 THEN 1 -- 
+		END IsDataProblem,
+    CASE 
+		WHEN LT.DIMENSION3_ <> '999' and LT.AMOUNTMST <> 0.0 and LT.AMOUNTCUR = 0.0 THEN 
+			'Zero Currency Amount in Consolidated'
+		WHEN LT.DIMENSION3_ = '999' and LT.AMOUNTMST <> 0.0 and LT.AMOUNTCUR = 0.0 THEN 
+			'Zero Currency Amount in Transaction'
+		WHEN LT.DIMENSION3_ <> '999' and LT.AMOUNTMST = 0.0 and LT.AMOUNTCUR <> 0.0 THEN 
+			'Zero USD amount in Consoilidated'
+		WHEN LT.DIMENSION3_ = '999' and LT.AMOUNTMST = 0.0 and LT.AMOUNTCUR <> 0.0 THEN 
+			'Zero USD amount in Transaction'			
+		WHEN LT.DIMENSION3_ = '999' and LT.CURRENCYCODE <> 'USD' and
+				LT.AMOUNTMST = LT.AMOUNTCUR and LT.AMOUNTMST <> 0.0 THEN 
+			'Standard situation for non-USD transactions'
+		WHEN LT.DIMENSION3_ <> '999' and LT.CURRENCYCODE <> 'USD' and
+				LT.AMOUNTMST = LT.AMOUNTCUR and LT.AMOUNTMST <> 0.0 THEN
+				'No Currency Exchange in Consolidated'		
+		END Comment,
+	coalesce(VIJ.PURCHID,'') PurchaseOrder,
+	coalesce(VIJ.INVOICEACCOUNT,'') Vendor,
+	coalesce(PT.PURCHNAME,'') VendorName,
+	coalesce(PT.SEMREQUESTOR,'') PoRequester,
+	coalesce(PT.REQUISITIONER,'') Requisitioner,
+	coalesce(PT.DELIVERYADDRESS,'') [Address],
+	coalesce(PL.QTY,0) PoQTY,
+	coalesce(PL.ItemNumber,'')ItemNumber,
+	CASE WHEN LA.[GL Area] in ( 'Revenue' , 'Direct Cost' , 'Other Income/Expense') THEN 
+			LA.[GL Area] ELSE AD.[IS Level1] END as [IS Level1],
+	CASE WHEN LA.[GL Area] in ( 'Revenue' , 'Direct Cost' , 'Other Income/Expense') THEN 
+			LA.[GL SubArea] ELSE AD.[IS Level2] END as [IS Level2]			
+from ax.LedgerTrans LT
+left join enum.AxLedgerAccount LA on LA.[GL AccountNum] = LT.ACCOUNTNUM 
+left join ax.PlanExchRate ER on ER.CurrencyCode = LT.CURRENCYCODE
+  and LT.TRANSDATE between ER.DateFrom and ER.DateTo
+left join ax.VendInvoiceJour VIJ on VIJ.LEDGERVOUCHER = LT.VOUCHER 
+	and (coalesce(LT.DOCUMENTNUM,'') = coalesce(VIJ.INVOICEID,''))
+left join ax.PurchTable PT on PT.PURCHID = VIJ.PURCHID
+left join (select PURCHID, SUM(QTYORDERED) QTY, MAX(ITEMID) ItemNumber 
+			from ax.PurchLine  group by PURCHID) PL on PL.PURCHID = VIJ.PURCHID
+left join enum.AxDepartment AD on AD.[Dept Id] = LT.DIMENSION
+WHERE LT.TRANSDATE >= '2013-07-01'
+and LA.[GL Account type] <> 'Balance' -- Only 'Profit and Loss'
+--and DATAAREAID <> '000'
+

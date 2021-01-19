@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\MBrondum] FOR LOGIN [CANDY\MBrondum];
+

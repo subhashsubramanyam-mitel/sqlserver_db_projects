@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SkyDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{64dd9e51-8679-4c18-8a26-5a78ae1243bf}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SkyDB</RootNamespace>
+    <AssemblyName>SkyDB</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Santana\" />
+    <Folder Include="Santana\Tables\" />
+    <Folder Include="app_skydb\" />
+    <Folder Include="app_skydb\Tables\" />
+    <Folder Include="temp\" />
+    <Folder Include="temp\Tables\" />
+    <Folder Include="Candy_eabramov\" />
+    <Folder Include="Candy_eabramov\Tables\" />
+    <Folder Include="MWSandbox\" />
+    <Folder Include="MWSandbox\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="gainsight\" />
+    <Folder Include="gainsight\Tables\" />
+    <Folder Include="shv\" />
+    <Folder Include="shv\Tables\" />
+    <Folder Include="SkyTeamSandbox\" />
+    <Folder Include="SkyTeamSandbox\Tables\" />
+    <Folder Include="MWSandbox\Views\" />
+    <Folder Include="shv\Views\" />
+    <Folder Include="Santana\Views\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Santana\Tables\additionalUserData_cleaned_4.sql" />
+    <Build Include="app_skydb\Tables\SkySipData.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="Santana\Tables\SkyAccountSnapshot.sql" />
+    <Build Include="app_skydb\Tables\SkyCSData.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="temp\Tables\test.sql" />
+    <Build Include="temp\Tables\chris_test.sql" />
+    <Build Include="Santana\Tables\additionalUserData_cleaned_2.sql" />
+    <Build Include="Candy_eabramov\Tables\Temp.emil_test.sql" />
+    <Build Include="MWSandbox\Tables\SkyAccountList.sql" />
+    <Build Include="app_skydb\Tables\DeviceMap.sql">
+      <AnsiNulls>Off</AnsiNulls>
+    </Build>
+    <Build Include="dbo\Tables\SkyUserDetail.sql" />
+    <Build Include="gainsight\Tables\SkyCDR.sql" />
+    <Build Include="dbo\Tables\CCAgentInfo.sql" />
+    <Build Include="Santana\Tables\mVwSalesReport_SuggestedProfiles.sql" />
+    <Build Include="shv\Tables\CustomerServices.sql" />
+    <Build Include="Santana\Tables\mVwSalesReport_SuggestedHW.sql" />
+    <Build Include="MWSandbox\Tables\MigrationCustList.sql" />
+    <Build Include="MWSandbox\Tables\CrmUsage.sql" />
+    <Build Include="shv\Tables\ConnectProductMap.sql" />
+    <Build Include="shv\Tables\ConnectProductMap1.sql" />
+    <Build Include="MWSandbox\Tables\CustLIst11272017.sql" />
+    <Build Include="MWSandbox\Tables\ProfileAPI_Essentials.sql" />
+    <Build Include="MWSandbox\Tables\ProfileCRM_Standard.sql" />
+    <Build Include="Santana\Tables\MigrationQueue_Sky_UAT.sql" />
+    <Build Include="MWSandbox\Tables\InterestedAccounts.sql" />
+    <Build Include="MWSandbox\Tables\MigrationCustList1130.sql" />
+    <Build Include="Santana\Tables\additionalUserData_cleaned_5.sql" />
+    <Build Include="MWSandbox\Tables\ElvisHWMap.sql" />
+    <Build Include="shv\Tables\CustomerPhones.sql" />
+    <Build Include="dbo\Tables\MigrationCustList1130.sql" />
+    <Build Include="Santana\Tables\additionalUserData_cleaned_7.sql" />
+    <Build Include="MWSandbox\Tables\ConnectPricing_del.sql" />
+    <Build Include="SkyTeamSandbox\Tables\c9_subscriber_shared_line.sql" />
+    <Build Include="Santana\Tables\MigrationQueue_Sky.sql" />
+    <Build Include="MWSandbox\Tables\ConnectPricing.sql" />
+    <Build Include="dbo\Tables\tmpUserMap.sql" />
+    <Build Include="shv\Tables\HQAccounts.sql" />
+    <Build Include="MWSandbox\Tables\Elvisbk.sql" />
+    <Build Include="MWSandbox\Tables\ElvisInfo.sql" />
+    <Build Include="SkyTeamSandbox\Tables\bargeData.sql" />
+    <Build Include="Santana\Tables\additionalUserData_cleaned_3.sql" />
+    <Build Include="MWSandbox\Tables\DeviceInfo.sql" />
+    <Build Include="SkyTeamSandbox\Tables\additionalUserData.sql" />
+    <Build Include="Santana\Tables\additionalUserData_cleaned_6.sql" />
+    <Build Include="Santana\Tables\additionalUserData_cleaned_8.sql" />
+    <Build Include="MWSandbox\Tables\BossIdMap.sql" />
+    <Build Include="MWSandbox\Tables\ReportingAPIusers.sql" />
+    <Build Include="MWSandbox\Tables\ServicesBilledLastMonth.sql" />
+    <Build Include="dbo\Tables\tmpStaffing.sql" />
+    <Build Include="Santana\Tables\additionalUserData_cleaned.sql" />
+    <Build Include="MWSandbox\Tables\tmpQ.sql" />
+    <Build Include="SkyTeamSandbox\Tables\sccUserDetail.sql" />
+    <Build Include="MWSandbox\Tables\MigrationMap.sql" />
+    <Build Include="MWSandbox\Tables\QuoteProducts.sql" />
+    <Build Include="MWSandbox\Views\VwProfileTypes.sql" />
+    <Build Include="MWSandbox\Views\VwContractInfo.sql" />
+    <Build Include="MWSandbox\Views\VwSfdc.sql" />
+    <Build Include="MWSandbox\Views\VwSites.sql" />
+    <Build Include="MWSandbox\Views\VwProfilesBilled.sql" />
+    <Build Include="MWSandbox\Views\Vw4Or5Digit.sql" />
+    <Build Include="MWSandbox\Views\VwExtStartsWith09.sql" />
+    <Build Include="MWSandbox\Views\VwSkyMobService.sql" />
+    <Build Include="MWSandbox\Views\VwSCC.sql" />
+    <Build Include="MWSandbox\Views\VwSkyCustomerInfo.sql" />
+    <Build Include="shv\Views\VwConnectQuote.sql" />
+    <Build Include="MWSandbox\Views\VwSfdcARS.sql" />
+    <Build Include="Santana\Views\VwSalesReport_Excel.sql" />
+    <Build Include="MWSandbox\Views\VwSkyCustomerService.sql" />
+    <Build Include="MWSandbox\Views\VwSkyCustomerServiceMig.sql" />
+    <Build Include="MWSandbox\Views\VwAppsByTN.sql" />
+    <Build Include="MWSandbox\Views\VwSkyCustomerProfileMig.sql" />
+    <Build Include="MWSandbox\Views\VwMigQuoteOther.sql" />
+    <Build Include="MWSandbox\Views\VwMigQuoteProfiles.sql" />
+    <Build Include="MWSandbox\Views\VwSantanaQuote_SKY.sql" />
+    <Build Include="MWSandbox\Views\VwMigQuoteHW.sql" />
+    <Build Include="shv\Views\VwCustomerServiceDetail.sql" />
+    <Build Include="MWSandbox\Views\VwQuoteForOpp_CastIron.sql" />
+    <Build Include="MWSandbox\Views\VwNumRentalPhones.sql" />
+    <Build Include="Santana\Views\VwSalesReport_SuggestedProfiles.sql" />
+    <Build Include="MWSandbox\Views\VwElvisData.sql" />
+    <Build Include="Santana\Views\VwSalesReport_SuggestedHW.sql" />
+    <Build Include="Santana\Views\VwUserDetail_Excel.sql" />
+    <Build Include="MWSandbox\Views\VwDeviceInfo.sql" />
+    <Build Include="MWSandbox\Views\VwBossIdLookup.sql" />
+    <Build Include="MWSandbox\Views\VwReportingAPIAccounts.sql" />
+    <Build Include="MWSandbox\Views\VwCircuitPrice.sql" />
+    <Build Include="MWSandbox\Views\VwCircuitBundles.sql" />
+    <Build Include="MWSandbox\Views\VwProfileAddOnSummary.sql" />
+    <Build Include="MWSandbox\Views\VwMigQuoteACD.sql" />
+    <Build Include="MWSandbox\Views\VwUserDetail.sql" />
+    <Build Include="MWSandbox\Views\VwUserAddOns.sql" />
+    <Build Include="MWSandbox\Views\VwUserDeviceInfo.sql" />
+    <Build Include="Santana\Views\VwTNConfigDetail.sql" />
+    <Build Include="Santana\Views\VwUserConfigDetail_delete.sql" />
+    <Build Include="MWSandbox\Views\VwSantanaQuote_Tableau-delete.sql" />
+    <Build Include="Santana\Views\VwCCAgentInfo.sql" />
+    <Build Include="MWSandbox\Views\VwMigQuoteACD_V2.sql" />
+    <Build Include="Security\SkyImp.sql" />
+    <Build Include="Security\CANDY_administrator.sql" />
+    <Build Include="Security\CANDY_administrator_1.sql" />
+    <Build Include="Security\CANDY_tgoradia.sql" />
+    <Build Include="Security\CANDY_tgoradia_1.sql" />
+    <Build Include="Security\CANDY_sspier.sql" />
+    <Build Include="Security\CANDY_sspier_1.sql" />
+    <Build Include="Security\CANDY_cbartley.sql" />
+    <Build Include="Security\CANDY_cbartley_1.sql" />
+    <Build Include="Security\CANDY_mike.sql" />
+    <Build Include="Security\CANDY_mike_1.sql" />
+    <Build Include="Security\Candy_eabramov.sql" />
+    <Build Include="Security\CANDY_eabramov_1.sql" />
+    <Build Include="Security\app_skydb.sql" />
+    <Build Include="Security\app_skydb_1.sql" />
+    <Build Include="Security\CANDY_tabserver.sql" />
+    <Build Include="Security\CANDY_tabserver_1.sql" />
+    <Build Include="Security\CANDY_tmonson.sql" />
+    <Build Include="Security\CANDY_tmonson_1.sql" />
+    <Build Include="Security\CANDY_jtopolski.sql" />
+    <Build Include="Security\CANDY_jtopolski_1.sql" />
+    <Build Include="Security\CANDY_AOng.sql" />
+    <Build Include="Security\CANDY_AOng_1.sql" />
+    <Build Include="Security\CANDY_ATy.sql" />
+    <Build Include="Security\CANDY_ATy_1.sql" />
+    <Build Include="Security\CANDY_dgarvida.sql" />
+    <Build Include="Security\CANDY_dgarvida_1.sql" />
+    <Build Include="Security\CANDY_eperez.sql" />
+    <Build Include="Security\CANDY_eperez_1.sql" />
+    <Build Include="Security\CANDY_jsalinas.sql" />
+    <Build Include="Security\CANDY_jsalinas_1.sql" />
+    <Build Include="Security\CANDY_jorana.sql" />
+    <Build Include="Security\CANDY_jorana_1.sql" />
+    <Build Include="Security\CANDY_ldoblas.sql" />
+    <Build Include="Security\CANDY_ldoblas_1.sql" />
+    <Build Include="Security\CANDY_mcorsiga.sql" />
+    <Build Include="Security\CANDY_mcorsiga_1.sql" />
+    <Build Include="Security\CANDY_olago.sql" />
+    <Build Include="Security\CANDY_olago_1.sql" />
+    <Build Include="Security\CANDY_rgrajo.sql" />
+    <Build Include="Security\CANDY_rgrajo_1.sql" />
+    <Build Include="Security\app_megasilo.sql" />
+    <Build Include="Security\app_megasilo_1.sql" />
+    <Build Include="Security\app_Sky_ro.sql" />
+    <Build Include="Security\app_Sky_ro_1.sql" />
+    <Build Include="Security\CANDY_ssubramanyam.sql" />
+    <Build Include="Security\CANDY_ssubramanyam_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Security\app_skydb_2.sql" />
+    <Build Include="Security\Candy_eabramov_2.sql" />
+    <Build Include="Security\gainsight.sql" />
+    <Build Include="Security\MWSandbox.sql" />
+    <Build Include="Security\Santana.sql" />
+    <Build Include="Security\shv.sql" />
+    <Build Include="Security\SkyTeamSandbox.sql" />
+    <Build Include="Security\temp.sql" />
+    <Build Include="Security\Permissions.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinanceBI\[].sqlproj">
+      <Name>FinanceBI</Name>
+      <Project>{d9d4281e-86be-4100-beae-30ac52001545}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>FinanceBI</DatabaseSqlCmdVariable>
+    </ProjectReference>
+    <ProjectReference Include="..\MiBI\MiBI.sqlproj">
+      <Name>MiBI</Name>
+      <Project>{b7b971c1-b35a-42f0-b65d-62255b77790d}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>MiBI</DatabaseSqlCmdVariable>
+    </ProjectReference>
+    <ProjectReference Include="..\FinanceBI\FinanceBI.sqlproj">
+      <Name>FinanceBI</Name>
+      <Project>{d9d4281e-86be-4100-beae-30ac52001545}</Project>
+      <Private>True</Private>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseSqlCmdVariable>FinanceBI</DatabaseSqlCmdVariable>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="FinanceBI">
+      <DefaultValue>FinanceBI</DefaultValue>
+      <Value>$(SqlCmdVar__3)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="MiBI">
+      <DefaultValue>MiBI</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\140\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\140\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\140\SqlSchemas\msdb.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\140\SqlSchemas\msdb.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>msdb</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+</Project>

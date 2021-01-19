@@ -1,0 +1,56 @@
+﻿CREATE TABLE [MWSandbox].[MigrationCustList] (
+    [LichenAccountId]           INT            NULL,
+    [AccountId]                 INT            NOT NULL,
+    [AccountName]               NVARCHAR (120) NULL,
+    [ActiveMRR]                 MONEY          NULL,
+    [ContractType]              NVARCHAR (100) NULL,
+    [DaysSinceStart]            INT            NULL,
+    [StartDate]                 DATE           NULL,
+    [DaysUtilEnd]               INT            NULL,
+    [EndDate]                   DATE           NULL,
+    [AtRisk_SFDC]               VARCHAR (3)    NULL,
+    [Sites]                     INT            NULL,
+    [NumProfiles]               INT            NULL,
+    [BilledProfiles]            INT            NULL,
+    [Mobility]                  INT            NULL,
+    [HasNonStandardExt]         VARCHAR (3)    NOT NULL,
+    [ExtStartsWith0Or9]         INT            NOT NULL,
+    [ProfilesStartWith0]        INT            NOT NULL,
+    [ProfilesStartWith9]        INT            NOT NULL,
+    [HasSCC]                    VARCHAR (3)    NOT NULL,
+    [CRM]                       NVARCHAR (255) NULL,
+    [InterestedAccount]         VARCHAR (5)    NOT NULL,
+    [OutDialDigit]              CHAR (1)       NULL,
+    [BatchNumber]               VARCHAR (50)   NULL,
+    [ExtLength]                 FLOAT (53)     NULL,
+    [PageGroupsgt25]            FLOAT (53)     NULL,
+    [Cisco7937]                 FLOAT (53)     NULL,
+    [RingGroupsgt16]            FLOAT (53)     NULL,
+    [BargeGroups]               FLOAT (53)     NULL,
+    [NumRentalPhones]           INT            NOT NULL,
+    [Grandstream]               INT            NOT NULL,
+    [CiscoSPA112]               INT            NOT NULL,
+    [CiscoATA]                  INT            NOT NULL,
+    [PolycomSoundStation]       INT            NOT NULL,
+    [LinkSysSPA]                INT            NOT NULL,
+    [Other]                     INT            NOT NULL,
+    [ReportingAPI]              VARCHAR (3)    NOT NULL,
+    [ARS_Trigger]               VARCHAR (MAX)  COLLATE Latin1_General_BIN NULL,
+    [ARS_RootCausePrimary]      VARCHAR (500)  COLLATE Latin1_General_BIN NULL,
+    [ARS_RootCauseSecondary]    VARCHAR (500)  COLLATE Latin1_General_BIN NULL,
+    [ARS_RootCauseTertiary]     VARCHAR (500)  COLLATE Latin1_General_BIN NULL,
+    [ARS_Status]                VARCHAR (500)  COLLATE Latin1_General_BIN NULL,
+    [CustomerType]              VARCHAR (100)  COLLATE Latin1_General_BIN NULL,
+    [CreditHoldType]            VARCHAR (10)   NULL,
+    [PartnerName]               VARCHAR (100)  COLLATE Latin1_General_BIN NULL,
+    [PartnerSfdcId]             VARCHAR (50)   COLLATE Latin1_General_BIN NULL,
+    [PartnerM5DBAccountId_SFDC] VARCHAR (50)   COLLATE Latin1_General_BIN NULL,
+    [PartnerId_BOSS]            INT            NULL
+);
+
+
+GO
+GRANT SELECT
+    ON OBJECT::[MWSandbox].[MigrationCustList] TO [SkyImp]
+    AS [dbo];
+

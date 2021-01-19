@@ -1,0 +1,3 @@
+﻿CREATE USER [CANDY\jkappes] FOR LOGIN [CANDY\jkappes]
+    WITH DEFAULT_SCHEMA = [ALSandbox];
+

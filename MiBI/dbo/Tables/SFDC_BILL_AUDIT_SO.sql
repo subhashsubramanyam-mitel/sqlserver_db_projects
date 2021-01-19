@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[SFDC_BILL_AUDIT_SO] (
+    [Created]    DATETIME      CONSTRAINT [DF_SFDC_BILL_AUDIT_SO_Created] DEFAULT (getdate()) NOT NULL,
+    [Id]         INT           IDENTITY (1, 1) NOT NULL,
+    [SfdcId]     VARCHAR (50)  NOT NULL,
+    [SalesOrder] VARCHAR (100) NOT NULL,
+    [Status]     CHAR (10)     CONSTRAINT [DF_SFDC_BILL_AUDIT_SO_Status] DEFAULT ('N') NOT NULL,
+    [ErrorMsg]   TEXT          NULL,
+    CONSTRAINT [PK_SFDC_BILL_AUDIT_SO] PRIMARY KEY CLUSTERED ([Id] ASC) WITH (FILLFACTOR = 90)
+);
+

@@ -1,0 +1,26 @@
+﻿CREATE TABLE [invoice].[AxSaleLines] (
+    [AxId]              BIGINT         NOT NULL,
+    [LineItemId]        INT            NOT NULL,
+    [ProductId]         INT            NULL,
+    [KitChecksumValue]  INT            NULL,
+    [AxItemId]          NVARCHAR (512) NULL,
+    [SalesPrice]        MONEY          NULL,
+    [SalesQty]          INT            NOT NULL,
+    [InvoiceMonth]      DATE           NOT NULL,
+    [DatePeriodStart]   DATETIME       NOT NULL,
+    [DatePeriodEnd]     DATETIME       NULL,
+    [Name]              NVARCHAR (512) NOT NULL,
+    [LocationId]        INT            NOT NULL,
+    [AddressId]         INT            NOT NULL,
+    [City]              NVARCHAR (100) NULL,
+    [State]             NVARCHAR (10)  NOT NULL,
+    [ZipCode]           NVARCHAR (20)  NULL,
+    [Country]           CHAR (2)       NOT NULL,
+    [InvoiceId]         INT            NOT NULL,
+    [InvoiceGroupId]    INT            NOT NULL,
+    [ServiceGroupName]  INT            NULL,
+    [billingContact]    NVARCHAR (201) NULL,
+    [BillingCategoryId] INT            NULL,
+    CONSTRAINT [PK_FactAxSaleLines] PRIMARY KEY CLUSTERED ([AxId] ASC)
+);
+

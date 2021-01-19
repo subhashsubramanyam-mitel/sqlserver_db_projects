@@ -1,0 +1,3 @@
+﻿CREATE USER [app_MiCC] FOR LOGIN [app_MiCC]
+    WITH DEFAULT_SCHEMA = [Tableau];
+

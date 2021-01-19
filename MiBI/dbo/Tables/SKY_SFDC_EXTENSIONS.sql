@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[SKY_SFDC_EXTENSIONS] (
+    [PersonId]         INT          NOT NULL,
+    [ExternalCallerId] VARCHAR (15) NULL,
+    CONSTRAINT [PK_SKY_SFDC_EXTENSIONS] PRIMARY KEY CLUSTERED ([PersonId] ASC)
+);
+

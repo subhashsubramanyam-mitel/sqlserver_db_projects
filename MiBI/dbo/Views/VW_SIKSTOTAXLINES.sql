@@ -1,0 +1,13 @@
+﻿/*
+CREATE view dbo.VW_SIKSTOTAXLINES as SELECT * from dbo.SIKSTOTAXLINES;
+GO
+GRANT SELECT
+    ON OBJECT::[dbo].[VW_SIKSTOTAXLINES] TO [CANDY\dherskovich]
+    AS [dbo];
+
+
+GO
+GRANT SELECT
+    ON OBJECT::[dbo].[VW_SIKSTOTAXLINES] TO [CANDY\etlprod]
+    AS [dbo];
+*/

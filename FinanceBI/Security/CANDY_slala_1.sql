@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [CANDY\slala]
+    FROM WINDOWS WITH DEFAULT_DATABASE = [FinanceBI], DEFAULT_LANGUAGE = [us_english];
+

@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[SKY_SFDC_TEST] (
+    [Id]                        INT            IDENTITY (1, 1) NOT NULL,
+    [CiId]                      VARCHAR (50)   NOT NULL,
+    [OwnerId]                   NVARCHAR (255) NULL,
+    [m5db__Account__c]          NVARCHAR (255) NULL,
+    [m5db__Class__c]            NVARCHAR (255) NULL,
+    [CLOSE_m5db__order_id__c]   FLOAT (53)     NULL,
+    [m5db__Date_Created__c]     DATETIME       NULL,
+    [m5db__Date_Ordered__c]     DATETIME       NULL,
+    [m5db__FOC_Date__c]         DATETIME       NULL,
+    [m5db__Invoiced__c]         FLOAT (53)     NULL,
+    [m5db__Location__c]         NVARCHAR (255) NULL,
+    [m5db__MRR__c]              FLOAT (53)     NULL,
+    [m5db__NRR__c]              FLOAT (53)     NULL,
+    [m5db__order_id__c]         FLOAT (53)     NULL,
+    [m5db__product_id__c]       FLOAT (53)     NULL,
+    [m5db__Service_Name__c]     VARCHAR (255)  NULL,
+    [m5db__Status__c]           NVARCHAR (255) NULL,
+    [m5db__datebillingcease__c] DATETIME       NULL,
+    [m5db__datebillingstart__c] DATETIME       NULL,
+    [m5db__dateclosed__c]       DATETIME       NULL,
+    [m5db__dateliveactl__c]     DATETIME       NULL,
+    [m5db__service_id__c]       FLOAT (53)     NULL,
+    [m5db_CarrierName__c]       NVARCHAR (255) NULL,
+    [m5db_CarrierId__c]         NVARCHAR (255) NULL
+);
+

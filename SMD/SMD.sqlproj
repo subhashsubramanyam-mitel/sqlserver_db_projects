@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SMD</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{99a72bfc-05d2-4a13-b46a-7e5b169dc44f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SMD</RootNamespace>
+    <AssemblyName>SMD</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS_KS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Synonyms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\AX_CANCELED_ORDERS.sql" />
+    <Build Include="dbo\Tables\SFDC_SKY_BILLING_AX.sql" />
+    <Build Include="dbo\Tables\POS_RAW_SSC_marktest.sql" />
+    <Build Include="dbo\Tables\CGDiscounts.sql" />
+    <Build Include="dbo\Tables\SFDC_SKY_BILLING_AX_ROW.sql" />
+    <Build Include="dbo\Tables\SFDC_DNS_BILLING_TRK_bk.sql" />
+    <Build Include="dbo\Tables\Bombora_Prospect_Comprehensive_Report.sql" />
+    <Build Include="dbo\Tables\Bombora_Prospect_Summary_Report.sql" />
+    <Build Include="dbo\Tables\POS_ALL_04012018.sql" />
+    <Build Include="dbo\Tables\mVwHANA_CGAccounts.sql" />
+    <Build Include="dbo\Tables\POS_AXBILLINGS_COMBINED_LAST.sql" />
+    <Build Include="dbo\Tables\SFDC_AX_BILLING_TRK_05282015_2014.sql" />
+    <Build Include="dbo\Tables\SFDC_ORDER_SHIP_ADDR.sql" />
+    <Build Include="dbo\Tables\CUST_INFO.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_BILLING_TRK_05282015_2014.sql" />
+    <Build Include="dbo\Tables\SFDC_PARTNERS.sql" />
+    <Build Include="dbo\Tables\zbkup_928_sscpos.sql" />
+    <Build Include="dbo\Tables\SFDC_TERRITORY.sql" />
+    <Build Include="dbo\Tables\MITEL_PRODUCT_MAP.sql" />
+    <Build Include="dbo\Tables\SFDC_CUSTOMERS.sql" />
+    <Build Include="dbo\Tables\TmpBundles.sql" />
+    <Build Include="dbo\Tables\SFDC_PRODUCTS.sql" />
+    <Build Include="dbo\Tables\tmpRecIds07192016.sql" />
+    <Build Include="dbo\Tables\AX_ITEMCOST.sql" />
+    <Build Include="dbo\Tables\Forecast_Billings_Summary_Theater.sql" />
+    <Build Include="dbo\Tables\Forecast_Bookings_Summary_Theater.sql" />
+    <Build Include="dbo\Tables\SFDC_SKY_BILLING_ROW_TRK.sql" />
+    <Build Include="dbo\Tables\SFDC_DNS_BILLING_TRK.sql" />
+    <Build Include="dbo\Tables\tmpTest.sql" />
+    <Build Include="dbo\Tables\ProductPNL.sql" />
+    <Build Include="dbo\Tables\Connect_Onsite_SKUS_VARS.sql" />
+    <Build Include="dbo\Tables\CP_HIST_20190307.sql" />
+    <Build Include="dbo\Tables\SAP_BOOKINGS_RAW.sql" />
+    <Build Include="dbo\Tables\Connect_Onsite_SKUS_VARS_backup.sql" />
+    <Build Include="dbo\Tables\TMP_QCGS_BKUP.sql" />
+    <Build Include="dbo\Tables\SSC_QCOGS.sql" />
+    <Build Include="dbo\Tables\AX_DIMENSIONS.sql" />
+    <Build Include="dbo\Tables\AX_CUST_ADDRESS.sql" />
+    <Build Include="dbo\Tables\AX_CPEaaS_LicenseBreakdown.sql" />
+    <Build Include="dbo\Tables\SFDC_SAP_AX_ID_MAP_04172018.sql" />
+    <Build Include="dbo\Tables\Leadspace-Customers.sql" />
+    <Build Include="dbo\Tables\SFDC_SAP_AX_ID_MAP.sql" />
+    <Build Include="dbo\Tables\SMD_ETL_TRK.sql" />
+    <Build Include="dbo\Tables\CI_POS_BILLINGS_test.sql" />
+    <Build Include="dbo\Tables\tmpSfdcFiles.sql" />
+    <Build Include="dbo\Tables\Q4BillingsCrosscheck.sql" />
+    <Build Include="dbo\Tables\SAP_BILLINGS_RAW.sql" />
+    <Build Include="dbo\Tables\tmpSfdcFiles1.sql" />
+    <Build Include="dbo\Tables\SFDC_SKY_BILLING_TRK_bk.sql" />
+    <Build Include="dbo\Tables\Plan_Rate.sql" />
+    <Build Include="dbo\Tables\tmpSfdcFiles2.sql" />
+    <Build Include="dbo\Tables\HOA_PRODUCT_FAMILY.sql" />
+    <Build Include="dbo\Tables\POS_AX_CUSTOMERID.sql" />
+    <Build Include="dbo\Tables\TEST_POS_RAW_SSC.sql" />
+    <Build Include="dbo\Tables\Bombora_Comprehensive_Report.sql" />
+    <Build Include="dbo\Tables\CP_InstanceRef.sql" />
+    <Build Include="dbo\Tables\Bombora_Summary_Report.sql" />
+    <Build Include="dbo\Tables\tmpSscInv.sql" />
+    <Build Include="dbo\Tables\SFDC_PRICEBOOK_ENTRY.sql" />
+    <Build Include="dbo\Tables\Tmp_Orders.sql" />
+    <Build Include="dbo\Tables\CP_HIST_bk.sql" />
+    <Build Include="dbo\Tables\POS_Scansource_RawDataDump.sql" />
+    <Build Include="dbo\Tables\POS_Ingram_RawDataDump.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_BILLING_TRKbackup.sql" />
+    <Build Include="dbo\Tables\SFDC_ASSET_PRICE.sql" />
+    <Build Include="dbo\Tables\SFDC_AX_BILLING_TRK_OC2.sql" />
+    <Build Include="dbo\Tables\SFDC_OPTY_TRK_OC2.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_BILLING_TRK_OC2.sql" />
+    <Build Include="dbo\Tables\tmp50662back.sql" />
+    <Build Include="dbo\Tables\tmpSkyCAD.sql" />
+    <Build Include="dbo\Tables\tmpDupSku.sql" />
+    <Build Include="dbo\Tables\POS_E2O_IMPORT.sql" />
+    <Build Include="dbo\Tables\Forecast_Billings_Summary_Region.sql" />
+    <Build Include="dbo\Tables\AX_Table_StdCost.sql" />
+    <Build Include="dbo\Tables\CP_InstanceSnapshot.sql" />
+    <Build Include="dbo\Tables\SFDC_SKY_BILLING_TRK.sql" />
+    <Build Include="dbo\Tables\xTest.sql" />
+    <Build Include="dbo\Tables\tmpMissedOrders.sql" />
+    <Build Include="dbo\Tables\SFDC_CONCESSION_DELEGATES_test.sql" />
+    <Build Include="dbo\Tables\SFDC_RENEWAL_TRK.sql" />
+    <Build Include="dbo\Tables\tmp09222014SSCSFDC.sql" />
+    <Build Include="dbo\Tables\WorkflowInstance.sql" />
+    <Build Include="dbo\Tables\AX_EXCHRATE_EUR_issue.sql" />
+    <Build Include="dbo\Tables\WorkflowTasks.sql" />
+    <Build Include="dbo\Tables\Bombora_ Surge_ Report.sql" />
+    <Build Include="dbo\Tables\HOA_MASTERcommissions_20140701_20150213.sql" />
+    <Build Include="dbo\Tables\QMS_QUOTE_LINE.sql" />
+    <Build Include="dbo\Tables\tmpHanaBill.sql" />
+    <Build Include="dbo\Tables\CP_HIST_02190123.sql" />
+    <Build Include="dbo\Tables\AX_ARENA_QCOGS.sql" />
+    <Build Include="dbo\Tables\OLE DB Destination.sql" />
+    <Build Include="dbo\Tables\PRODUCT_LINE_BAK12102014.sql" />
+    <Build Include="dbo\Tables\TMP_POS_SSC_AUDIT.sql" />
+    <Build Include="dbo\Tables\PRODUCT_LINE_RAW.sql" />
+    <Build Include="dbo\Tables\QMS_QUOTE_HEADER.sql" />
+    <Build Include="dbo\Tables\tmp_HanaPOS.sql" />
+    <Build Include="dbo\Tables\AX_BUNDLE_BILLINGS.sql" />
+    <Build Include="dbo\Tables\Tableau_PBL_Targets.sql" />
+    <Build Include="dbo\Tables\TMP_QCOGS.sql" />
+    <Build Include="dbo\Tables\TMP_QCOGS_BKUP1110.sql" />
+    <Build Include="dbo\Tables\AX_BILLINGS_WITHBUNDLES.sql" />
+    <Build Include="dbo\Tables\AX_QCOGS_TMP.sql" />
+    <Build Include="dbo\Tables\PartnerPerformance2.sql" />
+    <Build Include="dbo\Tables\MITEL_PRODUCT_MAP2.sql" />
+    <Build Include="dbo\Tables\PricebookEntry_History_UAT.sql" />
+    <Build Include="dbo\Tables\PartnerPerformance.sql" />
+    <Build Include="dbo\Tables\SAP_ORDERS_RAW.sql" />
+    <Build Include="dbo\Tables\POS_AXBILLINGS_COMBINED_Historical.sql" />
+    <Build Include="dbo\Tables\tempTableBookData.sql" />
+    <Build Include="dbo\Tables\ Metrics_Targets.sql" />
+    <Build Include="dbo\Tables\forecast.sql" />
+    <Build Include="dbo\Tables\salesline_PM.sql" />
+    <Build Include="dbo\Tables\tmp40006.sql" />
+    <Build Include="dbo\Tables\custinvoicetrans_PM.sql" />
+    <Build Include="dbo\Tables\AX_Invoice_SKU.sql" />
+    <Build Include="dbo\Tables\SFDC_CONCESSION_DELEGATES_62018.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_BILLING_TRK.sql" />
+    <Build Include="dbo\Tables\ProductPNL_bk09192014.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_AUDIT_tmp.sql" />
+    <Build Include="dbo\Tables\PM_SALESDATA_ARCHIVE.sql" />
+    <Build Include="dbo\Tables\test_SWA.sql" />
+    <Build Include="dbo\Tables\SFDC_SKY_XSELL_TRK.sql" />
+    <Build Include="dbo\Tables\MI_SFDC_ORDER_LINES.sql" />
+    <Build Include="dbo\Tables\B_SFDC_PARTNERS.sql" />
+    <Build Include="dbo\Tables\Archive-ImpactInvoiceQuery2007.sql" />
+    <Build Include="dbo\Tables\tmpSSCSkuList.sql" />
+    <Build Include="dbo\Tables\INTEGRATION_CONTROL.sql" />
+    <Build Include="dbo\Tables\SFDC_CONCESSION_DELEGATES.sql" />
+    <Build Include="dbo\Tables\PRODUCT_LINE.sql" />
+    <Build Include="dbo\Tables\SFDC_CRIMSON_BILLING_TRK.sql" />
+    <Build Include="dbo\Tables\SalesCalendar.sql" />
+    <Build Include="dbo\Tables\AX_BACKLOG.sql" />
+    <Build Include="dbo\Tables\CP_HIST.sql" />
+    <Build Include="dbo\Tables\AX_BOOKINGS.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_BILLING_TRK_SSC_09142015.sql" />
+    <Build Include="dbo\Tables\AX_BILLINGS.sql" />
+    <Build Include="dbo\Tables\AX_BILLINGS_BOM.sql" />
+    <Build Include="dbo\Tables\tmp_histupdate.sql" />
+    <Build Include="dbo\Tables\Bombora_Prospect_Comprehensive_Report_bk.sql" />
+    <Build Include="dbo\Tables\AX_EXCHRATE.sql" />
+    <Build Include="dbo\Tables\POS_CI_ING.sql" />
+    <Build Include="dbo\Tables\temp_billings.sql" />
+    <Build Include="dbo\Tables\CP_HIST_20180808.sql" />
+    <Build Include="dbo\Tables\tmpCM.sql" />
+    <Build Include="dbo\Tables\AX_EXCHRATE_ALL.sql" />
+    <Build Include="dbo\Tables\COGS.sql" />
+    <Build Include="dbo\Tables\AX_ITEMS.sql" />
+    <Build Include="dbo\Tables\Bombora_Comprehensive_Report_old.sql" />
+    <Build Include="dbo\Tables\POS_ALL.sql" />
+    <Build Include="dbo\Tables\POS_RAW_SSC_FINAL_BAKCKUP.sql" />
+    <Build Include="dbo\Tables\POS_AXBILLINGS_COMBINED.sql" />
+    <Build Include="dbo\Tables\TMP_SO.sql" />
+    <Build Include="dbo\Tables\MI_SFDC_INVOICE_LINES.sql" />
+    <Build Include="dbo\Tables\Bombora_Comprehensive_ReportV2.sql" />
+    <Build Include="dbo\Tables\CP_HIST_bkup07182018.sql" />
+    <Build Include="dbo\Tables\DYNAMICS_INTEGRATION_ATTRIB.sql" />
+    <Build Include="dbo\Tables\CP_HIST_CC.sql" />
+    <Build Include="dbo\Tables\PricebookEntry_History.sql" />
+    <Build Include="dbo\Tables\SFDC_OPTY_TRK.sql" />
+    <Build Include="dbo\Tables\MI_SFDC_ORDERS.sql" />
+    <Build Include="dbo\Tables\SFDC_AX_BILLING_TRK.sql" />
+    <Build Include="dbo\Tables\CUSTINVOICETRANS.sql" />
+    <Build Include="dbo\Tables\POS_RAW_SSC.sql" />
+    <Build Include="dbo\Tables\POS_INGRAM_SKUS.sql" />
+    <Build Include="dbo\Tables\CUSTTABLE.sql" />
+    <Build Include="dbo\Tables\POS_RAW_ING_05162017.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_BILLING_TRK_SSCBKUP08312015.sql" />
+    <Build Include="dbo\Tables\POS_ALL_ARCHIVE.sql" />
+    <Build Include="dbo\Tables\INVENTTABLE.sql" />
+    <Build Include="dbo\Tables\AX_QCOGS_ARENA.sql" />
+    <Build Include="dbo\Tables\INVENTTRANS.sql" />
+    <Build Include="dbo\Tables\POS_RAW_TD.sql" />
+    <Build Include="dbo\Tables\SALESLINE.sql" />
+    <Build Include="dbo\Tables\Temp_POS_July2015.sql" />
+    <Build Include="dbo\Tables\Forecast_Billings_Summary.sql" />
+    <Build Include="dbo\Tables\Leadspace-SFDCId Mapped.sql" />
+    <Build Include="dbo\Tables\SALESTABLE.sql" />
+    <Build Include="dbo\Tables\Forecast_Bookings_Summary.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_AUDIT_03312016.sql" />
+    <Build Include="dbo\Tables\Australia_SHV_BillingsData.sql" />
+    <Build Include="dbo\Tables\SAP_BILLINGS.sql" />
+    <Build Include="dbo\Tables\SE_SUPPORT_PRD_LKUP.sql" />
+    <Build Include="dbo\Tables\SFDC_OPTY_TRK_bkup_Ingram.sql" />
+    <Build Include="dbo\Tables\tmpInv.sql" />
+    <Build Include="dbo\Tables\Aus_billings.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_BILLING_TRK_bkup_Ingram.sql" />
+    <Build Include="dbo\Tables\LMS_COUPON_TRK.sql" />
+    <Build Include="dbo\Tables\TimeLookup.sql" />
+    <Build Include="dbo\Tables\POS_RAW_SSC_IMPORT.sql" />
+    <Build Include="dbo\Tables\tmpRecIds.sql" />
+    <Build Include="dbo\Tables\CI_POS_BILLINGS.sql" />
+    <Build Include="dbo\Tables\tmpRecIds_Update.sql" />
+    <Build Include="dbo\Tables\POS_ARCHIVE.sql" />
+    <Build Include="dbo\Tables\POS_CI_ING_bk.sql" />
+    <Build Include="dbo\Tables\SFDC_POS_AUDIT.sql" />
+    <Build Include="dbo\Tables\SFDC_OPP_AUDIT.sql" />
+    <Build Include="dbo\Tables\POS_RAW_TD_bk.sql" />
+    <Build Include="dbo\Views\V_POS_ALL_04012018.sql" />
+    <Build Include="dbo\Views\V_HANA_CG_DISCOUNTS.sql" />
+    <Build Include="dbo\Views\V_SFDC_ASSETS.sql" />
+    <Build Include="dbo\Views\V_AX_Renewals.sql" />
+    <Build Include="dbo\Views\V_HANA_CUSTOMERMASTER.sql" />
+    <Build Include="dbo\Views\V_SWA_TEST.sql" />
+    <Build Include="dbo\Views\V_POS_AX_BILLINGS_MITELPRODUCT.sql" />
+    <Build Include="dbo\Views\V_SFDC_BOOKINGS.sql" />
+    <Build Include="dbo\Views\V_SFDC_ASSETS_BUNDLES.sql" />
+    <Build Include="dbo\Views\PM_SALESDATA.sql" />
+    <Build Include="dbo\Views\V_Forecast_Bookings_Theater.sql" />
+    <Build Include="dbo\Views\V_POS_AX_CUSTOMERID.sql" />
+    <Build Include="dbo\Views\V_Bombora_ProspectAnalytics_withSalesRegion.sql" />
+    <Build Include="dbo\Views\V_SFDC_ORDERS_ALL.sql" />
+    <Build Include="dbo\Views\V_CP_HIST_LOAD_Yesterday.sql" />
+    <Build Include="dbo\Views\V_SFDC_BACKLOG.sql" />
+    <Build Include="dbo\Views\V_PARTNERG.sql" />
+    <Build Include="dbo\Views\V_SFDC_DNS_BILLING.sql" />
+    <Build Include="dbo\Views\V_SAP_BILLINGS_RAW.sql" />
+    <Build Include="dbo\Views\V_CI_POS_Data_Import.sql" />
+    <Build Include="dbo\Views\C_SSC_CUSTOMERIDS.sql" />
+    <Build Include="dbo\Views\V_Archive_ERP.sql" />
+    <Build Include="dbo\Views\temp_Q4ITBillings.sql" />
+    <Build Include="dbo\Views\AX_Available_Inventory_to_BacklogStg.sql" />
+    <Build Include="dbo\Views\V_Forecast_Bookings.sql" />
+    <Build Include="dbo\Views\V_MI_SFDC_ORDERS.sql" />
+    <Build Include="dbo\Views\V_POS_ALL.sql" />
+    <Build Include="dbo\Views\V_HANA_BILL_AGR.sql" />
+    <Build Include="dbo\Views\V_SFDC_INVOICE.sql" />
+    <Build Include="dbo\Views\V_SFDC_PARTNERCLOUDDEMO.sql" />
+    <Build Include="dbo\Views\X_SFDC_ASSETS_RAW.sql" />
+    <Build Include="dbo\Views\V_Bombora_Analytics_withSalesRegion.sql" />
+    <Build Include="dbo\Views\V_SFDC_POS_BILLINGS.sql" />
+    <Build Include="dbo\Views\V_AX_Invoice_SKU_TEST.sql" />
+    <Build Include="dbo\Views\V_SFDC_ORDER_SHIP_ADDR.sql" />
+    <Build Include="dbo\Views\V_HANA_SIC.sql" />
+    <Build Include="dbo\Views\V_POS_E2O_IMPORT.sql" />
+    <Build Include="dbo\Views\AX_Available_Inventory_to_Backlog.sql" />
+    <Build Include="dbo\Views\V_SFDC_POS_E2O_EXPORT.sql" />
+    <Build Include="dbo\Views\V_SFDC_SKY_XSELL.sql" />
+    <Build Include="dbo\Views\V_SAP_ASSETS.sql" />
+    <Build Include="dbo\Views\V_SFDC_RENEWAL_TRK.sql" />
+    <Build Include="dbo\Views\V_SFDC_QMS_ORDERS.sql" />
+    <Build Include="dbo\Views\V_SFDC_EDI_ORDERS.sql" />
+    <Build Include="dbo\Views\V_AX_EXCHRATE.sql" />
+    <Build Include="dbo\Views\V_Forecast_BookingsSummary.sql" />
+    <Build Include="dbo\Views\V_SFDC_POS_ORDERS.sql" />
+    <Build Include="dbo\Views\SFDC_ASSET_DEV.sql" />
+    <Build Include="dbo\Views\V_PM_SALESDATA.sql" />
+    <Build Include="dbo\Views\V_SFDC_RENEWAL_QUEUE.sql" />
+    <Build Include="dbo\Views\V_AX_Invoice_SKU2.sql" />
+    <Build Include="dbo\Views\V_HANA_CUSTOMERMASTER_SLIM.sql" />
+    <Build Include="dbo\Views\V_TEST_ZYME_POS.sql" />
+    <Build Include="dbo\Views\V_SFDC_ORDERS.sql" />
+    <Build Include="dbo\Views\V_TABLEAU_E2O_POS.sql" />
+    <Build Include="dbo\Views\V_MODELN_SSC_AUDIT.sql" />
+    <Build Include="dbo\Views\V_QMS_QUOTES.sql" />
+    <Build Include="dbo\Views\V_tempTable_forecast_FY15Q1.sql" />
+    <Build Include="dbo\Views\V_HANA_CONSOL_BILL.sql" />
+    <Build Include="dbo\Views\V_SFDC_AX_BILLINGS.sql" />
+    <Build Include="dbo\Views\AX_Backlog_GS2.sql" />
+    <Build Include="dbo\Views\V_SFDC_POS_AUDIT.sql" />
+    <Build Include="dbo\Views\X_SFDC_ASSETS_NOBUNDLES.sql" />
+    <Build Include="dbo\Views\V_SFDC_AX_ORDERS_ALL.sql" />
+    <Build Include="dbo\Views\V_SFDC_ASSETS_SUBCOMP.sql" />
+    <Build Include="dbo\Views\V_SWA_RENEWALOPP.sql" />
+    <Build Include="dbo\Views\V_SFDC_QMS_OPTY_CLOSE.sql" />
+    <Build Include="dbo\Views\V_SFDC_POS_OPTY_CLOSE.sql" />
+    <Build Include="dbo\Views\V_SFDC_SKY_BILLINGS.sql" />
+    <Build Include="dbo\Views\V_CP_DELTAS.sql" />
+    <Build Include="dbo\Views\V_HANA_REVENUE.sql" />
+    <Build Include="dbo\Views\V_HANA_SO.sql" />
+    <Build Include="dbo\Views\V_AX_BOOKBACK.sql" />
+    <Build Include="dbo\Views\V_HANA_BACKLOG.sql" />
+    <Build Include="dbo\Views\V_AX_EXCHRATE_ALL.sql" />
+    <Build Include="dbo\Views\V_MI_SFDC_ORDER_LINES.sql" />
+    <Build Include="dbo\Views\V_AX_BILL.sql" />
+    <Build Include="dbo\Views\V_SFDC_CRIMSON_BILL.sql" />
+    <Build Include="dbo\Views\V_RMA.sql" />
+    <Build Include="dbo\Views\V_MI_SFDC_INVOICE.sql" />
+    <Build Include="dbo\Views\V_Forecast_Billings.sql" />
+    <Build Include="dbo\Views\V_HANA_BILL.sql" />
+    <Build Include="dbo\Views\V_Forecast_Billings_theater.sql" />
+    <Build Include="dbo\Views\V_ZIPTOTERRITORY.sql" />
+    <Build Include="dbo\Views\V_SFDC_DNS.sql" />
+    <Build Include="dbo\Views\V_SFDC_INVOICE_ALL.sql" />
+    <Build Include="dbo\Views\V_PBLBookings_target.sql" />
+    <Build Include="dbo\Views\V_AX_ITEMCOST_CURRENT.sql" />
+    <Build Include="dbo\Views\V_POS_ALL_test.sql" />
+    <Build Include="dbo\Views\V_AX_POS.sql" />
+    <Build Include="dbo\Views\V_HANA_TCURR.sql" />
+    <Build Include="dbo\Views\V_Bombora_Analytics.sql" />
+    <Build Include="dbo\Views\V_SFDC_ASSET_SHIPDATE.sql" />
+    <Build Include="dbo\Views\V_SWA_DATA.sql" />
+    <Build Include="dbo\Views\V_SFDC_ASSET_SERIALNUM.sql" />
+    <Build Include="dbo\Views\V_PM_POS_DATA.sql" />
+    <Build Include="dbo\Views\V_AX_ITEMS.sql" />
+    <Build Include="dbo\Views\V_PM_SAP_DATA.sql" />
+    <Build Include="dbo\Views\V_SFDC_SALESPRODUCTS.sql" />
+    <Build Include="dbo\Views\V_AX_BACKLOG_SKYRENT.sql" />
+    <Build Include="dbo\Views\V_AX_CUST_ADDRESS.sql" />
+    <Build Include="dbo\Views\V_CP_HIST_LOAD.sql" />
+    <Build Include="dbo\Views\V_POS_ALL_Backup.sql" />
+    <Build Include="dbo\Views\V_AX_POS_Backup.sql" />
+    <Build Include="dbo\Views\V_AX_Invoice_SKU.sql" />
+    <Build Include="dbo\Views\V_AX_Open_Support_Renewal_Orders.sql" />
+    <Build Include="dbo\Views\V_Cust_Details.sql" />
+    <Build Include="dbo\Views\V_AX_Invoice_SKU_version1.sql" />
+    <Build Include="dbo\Views\V_SFDC_MISSING_ITEMS.sql" />
+    <Build Include="dbo\Views\V_HANA_DISTY_INVENTORY.sql" />
+    <Build Include="dbo\Views\V_LMS_COUPONS.sql" />
+    <Build Include="Security\POS.sql" />
+    <Build Include="Security\PM.sql" />
+    <Build Include="Security\candy_ykang.sql" />
+    <Build Include="Security\CRAdmin.sql" />
+    <Build Include="Security\CANDY_tabserver.sql" />
+    <Build Include="Security\candy_orionsrv.sql" />
+    <Build Include="Security\CANDY_BPaddock.sql" />
+    <Build Include="Security\CANDY_MTendulkar.sql" />
+    <Build Include="Security\CANDY_SSidhu.sql" />
+    <Build Include="Security\ITApps.sql" />
+    <Build Include="Security\ITApps_1.sql" />
+    <Build Include="Security\CANDY_tgoradia.sql" />
+    <Build Include="Security\CANDY_mha.sql" />
+    <Build Include="Security\CANDY_pmukhi.sql" />
+    <Build Include="Security\CANDY_Corpdbadmin.sql" />
+    <Build Include="Security\CANDY_PKaloti.sql" />
+    <Build Include="Security\CANDY_wnolan.sql" />
+    <Build Include="Security\CANDY_JHadden.sql" />
+    <Build Include="Security\CANDY_VNaganathan.sql" />
+    <Build Include="Security\CANDY_ssas.sql" />
+    <Build Include="Security\data_reader.sql" />
+    <Build Include="Security\CANDY_bhamlin.sql" />
+    <Build Include="Security\CANDY_lnatal.sql" />
+    <Build Include="Security\hanatest.sql" />
+    <Build Include="Security\nkleinberg.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\fnConvertToCaseInsensitiveId.sql" />
+    <Build Include="dbo\Stored Procedures\Forecast_Billings_Summarize_Theater.sql" />
+    <Build Include="dbo\Stored Procedures\Forecast_Billings_Summarize_Region.sql" />
+    <Build Include="dbo\Stored Procedures\OC_LoadOptyTable.sql" />
+    <Build Include="dbo\Stored Procedures\SFDC_POSCustomerIdFromPO.sql" />
+    <Build Include="dbo\Stored Procedures\Forecast_Bookings_Summarize_Theater.sql" />
+    <Build Include="dbo\Stored Procedures\SSCPOSDeleteNulls.sql" />
+    <Build Include="dbo\Stored Procedures\Sp_PricebookEntry_History.sql" />
+    <Build Include="dbo\Stored Procedures\Forecast_Billings_Summarize.sql" />
+    <Build Include="dbo\Stored Procedures\mark_FIX_ASSETS.sql" />
+    <Build Include="dbo\Stored Procedures\Forecast_Bookings_Summarize.sql" />
+    <Build Include="Security\candy_orionsrv_1.sql" />
+    <Build Include="dbo\Synonyms\POS_RAW_ING.sql" />
+    <Build Include="Security\Permissions.sql" />
+  </ItemGroup>
+</Project>

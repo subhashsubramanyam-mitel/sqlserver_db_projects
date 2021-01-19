@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [CANDY\tgoradia]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

@@ -1,0 +1,55 @@
+﻿CREATE ROLE [SkyImp]
+    AUTHORIZATION [dbo];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\tmonson];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\jtopolski];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\AOng];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\ATy];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\dgarvida];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\eperez];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\jsalinas];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\jorana];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\ldoblas];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\mcorsiga];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\olago];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [CANDY\rgrajo];
+
+
+GO
+ALTER ROLE [SkyImp] ADD MEMBER [app_Sky_ro];
+

@@ -1,0 +1,3 @@
+﻿CREATE USER [CANDY\AGanti] FOR LOGIN [CANDY\AGanti]
+    WITH DEFAULT_SCHEMA = [ALSandbox];
+

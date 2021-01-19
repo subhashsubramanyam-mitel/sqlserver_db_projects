@@ -1,0 +1,25 @@
+﻿CREATE TABLE [ax].[Dimensions] (
+    [DESCRIPTION]          NVARCHAR (60) NOT NULL,
+    [NUM]                  NVARCHAR (30) NOT NULL,
+    [DIMENSIONCODE]        INT           NOT NULL,
+    [INCHARGE]             NVARCHAR (40) NOT NULL,
+    [CLOSED]               INT           NOT NULL,
+    [REVERSESIGN]          INT           NOT NULL,
+    [COLUMN_]              INT           NOT NULL,
+    [BOLDTYPEFACE]         INT           NOT NULL,
+    [ITALIC]               INT           NOT NULL,
+    [LINEEXCEED]           INT           NOT NULL,
+    [LINESUB]              INT           NOT NULL,
+    [UNDERLINETXT]         INT           NOT NULL,
+    [UNDERLINENUMERALS]    INT           NOT NULL,
+    [COSBLOCKPOSTCOST]     INT           NOT NULL,
+    [COSBLOCKPOSTWORK]     INT           NOT NULL,
+    [COSBLOCKDISTRIBUTION] INT           NOT NULL,
+    [COSBLOCKALLOCATION]   INT           NOT NULL,
+    [SEMPUBLISH]           INT           NOT NULL,
+    [DATAAREAID]           NVARCHAR (4)  NOT NULL,
+    [RECVERSION]           INT           NOT NULL,
+    [RECID]                BIGINT        NOT NULL,
+    [COMPANYGROUP]         NVARCHAR (10) NOT NULL
+);
+

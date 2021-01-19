@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\olago] FOR LOGIN [CANDY\olago];
+

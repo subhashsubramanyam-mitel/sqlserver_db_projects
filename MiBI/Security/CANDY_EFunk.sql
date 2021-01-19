@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\EFunk] FOR LOGIN [CANDY\EFunk];
+

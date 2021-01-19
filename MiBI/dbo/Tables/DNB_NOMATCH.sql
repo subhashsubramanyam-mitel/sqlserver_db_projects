@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[DNB_NOMATCH] (
+    [SE_ID] VARCHAR (15) NULL
+);
+

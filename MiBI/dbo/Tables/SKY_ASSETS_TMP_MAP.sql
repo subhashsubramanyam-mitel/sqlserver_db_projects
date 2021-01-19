@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[SKY_ASSETS_TMP_MAP] (
+    [M5DBId] VARCHAR (50) NULL,
+    [SKU]    VARCHAR (50) NULL
+);
+

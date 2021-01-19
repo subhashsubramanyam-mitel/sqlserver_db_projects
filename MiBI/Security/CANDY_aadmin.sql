@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\aadmin] FOR LOGIN [CANDY\aadmin];
+

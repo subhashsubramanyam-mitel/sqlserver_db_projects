@@ -1,0 +1,15 @@
+﻿
+CREATE View [enum].[VwAxMonth] as 
+		select [Month]
+      ,[Fiscal Month]
+      ,[FY Month#]
+      ,[FQ Week#]
+      ,[Fiscal Quarter]
+      ,[FY Quarter#]
+      ,[Fiscal Year]
+      ,[IsBusinessDay]
+      ,[IsHoliday]
+      ,[FQ Week#NS]
+	  ,[NumInvoicesAgo]
+  FROM [enum].[VwAxDate2]
+  where [Month] = [Date]

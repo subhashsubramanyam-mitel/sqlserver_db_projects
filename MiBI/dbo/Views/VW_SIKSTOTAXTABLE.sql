@@ -1,0 +1,1 @@
+﻿/* CREATE view dbo.VW_SIKSTOTAXTABLE as SELECT * from dbo.SIKSTOTAXTABLE; */

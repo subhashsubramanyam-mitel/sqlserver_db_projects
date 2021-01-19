@@ -1,0 +1,254 @@
+﻿GRANT CONNECT TO [CANDY\administrator];
+
+
+GO
+GRANT CONNECT TO [CANDY\tgoradia];
+
+
+GO
+GRANT ALTER TO [CANDY\sspier];
+
+
+GO
+GRANT CONNECT TO [CANDY\sspier];
+
+
+GO
+GRANT CREATE FUNCTION TO [CANDY\sspier];
+
+
+GO
+GRANT CREATE TABLE TO [CANDY\sspier];
+
+
+GO
+GRANT CREATE VIEW TO [CANDY\sspier];
+
+
+GO
+GRANT DELETE TO [CANDY\sspier];
+
+
+GO
+GRANT EXECUTE TO [CANDY\sspier];
+
+
+GO
+GRANT INSERT TO [CANDY\sspier];
+
+
+GO
+GRANT SELECT TO [CANDY\sspier];
+
+
+GO
+GRANT UPDATE TO [CANDY\sspier];
+
+
+GO
+GRANT VIEW DEFINITION TO [CANDY\sspier];
+
+
+GO
+GRANT ALTER TO [CANDY\cbartley];
+
+
+GO
+GRANT CONNECT TO [CANDY\cbartley];
+
+
+GO
+GRANT CREATE FUNCTION TO [CANDY\cbartley];
+
+
+GO
+GRANT CREATE TABLE TO [CANDY\cbartley];
+
+
+GO
+GRANT CREATE VIEW TO [CANDY\cbartley];
+
+
+GO
+GRANT DELETE TO [CANDY\cbartley];
+
+
+GO
+GRANT EXECUTE TO [CANDY\cbartley];
+
+
+GO
+GRANT INSERT TO [CANDY\cbartley];
+
+
+GO
+GRANT SELECT TO [CANDY\cbartley];
+
+
+GO
+GRANT UPDATE TO [CANDY\cbartley];
+
+
+GO
+GRANT VIEW DEFINITION TO [CANDY\cbartley];
+
+
+GO
+GRANT ALTER TO [CANDY\mike];
+
+
+GO
+GRANT CONNECT TO [CANDY\mike];
+
+
+GO
+GRANT CREATE FUNCTION TO [CANDY\mike];
+
+
+GO
+GRANT CREATE TABLE TO [CANDY\mike];
+
+
+GO
+GRANT CREATE VIEW TO [CANDY\mike];
+
+
+GO
+GRANT DELETE TO [CANDY\mike];
+
+
+GO
+GRANT EXECUTE TO [CANDY\mike];
+
+
+GO
+GRANT INSERT TO [CANDY\mike];
+
+
+GO
+GRANT SELECT TO [CANDY\mike];
+
+
+GO
+GRANT UPDATE TO [CANDY\mike];
+
+
+GO
+GRANT VIEW DEFINITION TO [CANDY\mike];
+
+
+GO
+GRANT ALTER TO [Candy\eabramov];
+
+
+GO
+GRANT CONNECT TO [Candy\eabramov];
+
+
+GO
+GRANT CREATE FUNCTION TO [Candy\eabramov];
+
+
+GO
+GRANT CREATE TABLE TO [Candy\eabramov];
+
+
+GO
+GRANT CREATE VIEW TO [Candy\eabramov];
+
+
+GO
+GRANT DELETE TO [Candy\eabramov];
+
+
+GO
+GRANT EXECUTE TO [Candy\eabramov];
+
+
+GO
+GRANT INSERT TO [Candy\eabramov];
+
+
+GO
+GRANT SELECT TO [Candy\eabramov];
+
+
+GO
+GRANT UPDATE TO [Candy\eabramov];
+
+
+GO
+GRANT VIEW DEFINITION TO [Candy\eabramov];
+
+
+GO
+GRANT CONNECT TO [app_skydb];
+
+
+GO
+GRANT CREATE TABLE TO [app_skydb];
+
+
+GO
+GRANT CONNECT TO [CANDY\tabserver];
+
+
+GO
+GRANT CONNECT TO [CANDY\tmonson];
+
+
+GO
+GRANT CONNECT TO [CANDY\jtopolski];
+
+
+GO
+GRANT CONNECT TO [CANDY\AOng];
+
+
+GO
+GRANT CONNECT TO [CANDY\ATy];
+
+
+GO
+GRANT CONNECT TO [CANDY\dgarvida];
+
+
+GO
+GRANT CONNECT TO [CANDY\eperez];
+
+
+GO
+GRANT CONNECT TO [CANDY\jsalinas];
+
+
+GO
+GRANT CONNECT TO [CANDY\jorana];
+
+
+GO
+GRANT CONNECT TO [CANDY\ldoblas];
+
+
+GO
+GRANT CONNECT TO [CANDY\mcorsiga];
+
+
+GO
+GRANT CONNECT TO [CANDY\olago];
+
+
+GO
+GRANT CONNECT TO [CANDY\rgrajo];
+
+
+GO
+GRANT CONNECT TO [app_megasilo];
+
+
+GO
+GRANT CONNECT TO [app_Sky_ro];
+
+
+GO
+GRANT CONNECT TO [CANDY\ssubramanyam];
+

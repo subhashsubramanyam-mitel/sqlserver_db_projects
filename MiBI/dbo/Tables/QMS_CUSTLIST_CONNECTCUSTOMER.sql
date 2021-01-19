@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[QMS_CUSTLIST_CONNECTCUSTOMER] (
+    [ST_ID]           VARCHAR (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+    [ConnectCustomer] VARCHAR (3)  NOT NULL
+);
+

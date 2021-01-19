@@ -1,0 +1,25 @@
+﻿CREATE TABLE [cdr].[Connect_CdrCurrentMonth_Schema] (
+    [PartyGroupId]          BIGINT         NOT NULL,
+    [ClusterId]             INT            NOT NULL,
+    [TimeStart]             DATETIME       NOT NULL,
+    [TimeEnd]               DATETIME       NULL,
+    [Duration]              INT            NOT NULL,
+    [ChargeAmount]          MONEY          NULL,
+    [HasCharge]             TINYINT        NOT NULL,
+    [ProfileId]             INT            NOT NULL,
+    [ProfileName]           NVARCHAR (100) NOT NULL,
+    [AccountId]             INT            NOT NULL,
+    [LocationId]            INT            NOT NULL,
+    [TnCountryCode]         VARCHAR (4)    NULL,
+    [Tn]                    VARCHAR (64)   NULL,
+    [SourceCountryCode]     VARCHAR (4)    NULL,
+    [SourceTn]              VARCHAR (64)   NULL,
+    [TargetCountryCode]     VARCHAR (4)    NULL,
+    [TargetTn]              VARCHAR (64)   NULL,
+    [AnsweredByCountryCode] VARCHAR (4)    NULL,
+    [AnsweredByTn]          VARCHAR (64)   NULL,
+    [CallTypeId]            INT            NULL,
+    [RouteTypeId]           INT            NULL,
+    [ServiceTypeId]         INT            NULL
+);
+

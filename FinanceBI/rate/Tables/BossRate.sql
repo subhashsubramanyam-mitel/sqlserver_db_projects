@@ -1,0 +1,27 @@
+﻿CREATE TABLE [rate].[BossRate] (
+    [id]              BIGINT          NOT NULL,
+    [rateGroupId]     BIGINT          NOT NULL,
+    [initialCharge]   DECIMAL (18, 2) NOT NULL,
+    [minSeconds]      INT             NOT NULL,
+    [intervalCharge]  DECIMAL (18, 2) NOT NULL,
+    [intervalSecs]    INT             NOT NULL,
+    [routetypeId]     BIGINT          NULL,
+    [calltypeId]      BIGINT          NULL,
+    [servicetypeId]   BIGINT          NULL,
+    [cityId]          BIGINT          NULL,
+    [stateId]         BIGINT          NULL,
+    [lata]            VARCHAR (5)     NULL,
+    [countryId]       BIGINT          NULL,
+    [tnGroup]         BIGINT          NULL,
+    [legacyId]        BIGINT          NULL,
+    [score]           INT             NOT NULL,
+    [DateModified]    DATETIME        NOT NULL,
+    [DateCreated]     DATETIME        NOT NULL,
+    [regionId]        BIGINT          NULL,
+    [subRegion]       NVARCHAR (15)   NULL,
+    [ModifiedBy]      NVARCHAR (50)   NOT NULL,
+    [RecordVersion]   ROWVERSION      NOT NULL,
+    [sourceCountryId] BIGINT          NOT NULL,
+    [IsDeleted]       BIT             NOT NULL
+);
+

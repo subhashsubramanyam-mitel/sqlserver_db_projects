@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\TAbenova] FOR LOGIN [CANDY\TAbenova];
+

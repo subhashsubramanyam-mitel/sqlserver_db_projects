@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[SFDC_BILL_ORDER_DUP] (
+    [SalesOrder] NVARCHAR (20) NULL
+);
+

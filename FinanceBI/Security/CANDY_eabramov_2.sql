@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [CANDY\eabramov]
+    AUTHORIZATION [CANDY\eabramov];
+

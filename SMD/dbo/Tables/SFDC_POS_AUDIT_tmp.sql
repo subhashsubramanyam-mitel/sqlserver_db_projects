@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[SFDC_POS_AUDIT_tmp] (
+    [RecId] NVARCHAR (268) NOT NULL
+);
+

@@ -1,0 +1,3 @@
+﻿CREATE USER [CANDY\wnolan] FOR LOGIN [CANDY\wnolan]
+    WITH DEFAULT_SCHEMA = [CANDY\wnolan];
+

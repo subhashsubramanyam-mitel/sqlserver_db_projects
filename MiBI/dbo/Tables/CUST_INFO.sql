@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[CUST_INFO] (
+    [Created]                     DATETIME        NOT NULL,
+    [SE_ID]                       VARCHAR (50)    NULL,
+    [ST_ID]                       VARCHAR (50)    NULL,
+    [PartnerRowId]                VARCHAR (50)    NULL,
+    [PartnerStId]                 VARCHAR (50)    NULL,
+    [NAME]                        VARCHAR (100)   NOT NULL,
+    [REGION]                      VARCHAR (50)    NULL,
+    [Support]                     VARCHAR (100)   NULL,
+    [discountType]                VARCHAR (50)    NULL,
+    [origPartnerName]             VARCHAR (100)   NULL,
+    [origPartnerRowId]            INT             NULL,
+    [origPartnerStId]             VARCHAR (50)    NULL,
+    [receivingPartnerDiscPercent] DECIMAL (18, 2) NULL,
+    [VadRowId]                    INT             NULL,
+    [VadId]                       VARCHAR (15)    NULL,
+    [ContractType]                VARCHAR (100)   NULL,
+    [ContractStatus]              VARCHAR (8)     NOT NULL,
+    [ContractStartDate]           DATETIME        NULL,
+    [ContractEndDate]             DATETIME        NULL,
+    [Build]                       INT             NULL,
+    [receivingParterId]           VARCHAR (50)    NULL,
+    [ParentSTID]                  VARCHAR (50)    NULL
+);
+

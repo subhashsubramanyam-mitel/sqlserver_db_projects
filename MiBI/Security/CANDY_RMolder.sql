@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\RMolder] FOR LOGIN [CANDY\RMolder];
+

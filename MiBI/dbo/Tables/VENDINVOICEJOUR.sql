@@ -1,0 +1,76 @@
+﻿CREATE TABLE [dbo].[VENDINVOICEJOUR] (
+    [VENDGROUP]           NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [PURCHID]             NVARCHAR (20)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [ORDERACCOUNT]        NVARCHAR (40)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [INVOICEACCOUNT]      NVARCHAR (40)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [INVOICEID]           NVARCHAR (20)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [INVOICEDATE]         DATETIME         NOT NULL,
+    [DUEDATE]             DATETIME         NOT NULL,
+    [CASHDISC]            NUMERIC (28, 12) NOT NULL,
+    [CASHDISCDATE]        DATETIME         NOT NULL,
+    [QTY]                 NUMERIC (28, 12) NOT NULL,
+    [VOLUME]              NUMERIC (28, 12) NOT NULL,
+    [WEIGHT]              NUMERIC (28, 12) NOT NULL,
+    [PREPAYMENT]          INT              NOT NULL,
+    [SALESBALANCE]        NUMERIC (28, 12) NOT NULL,
+    [INVOICEAMOUNT]       NUMERIC (28, 12) NOT NULL,
+    [CURRENCYCODE]        NVARCHAR (3)     COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [EXCHRATE]            NUMERIC (28, 12) NOT NULL,
+    [LEDGERVOUCHER]       NVARCHAR (20)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [DIMENSION]           NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [DIMENSION2_]         NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [DIMENSION3_]         NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [DOCUMENTNUM]         NVARCHAR (20)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [DOCUMENTDATE]        DATETIME         NOT NULL,
+    [COUNTRYREGIONID]     NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [INVOICEROUNDOFF]     NUMERIC (28, 12) NOT NULL,
+    [PAYMID]              NVARCHAR (200)   COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [CASHDISCCODE]        NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [PAYMENT]             NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [POSTINGPROFILE]      NVARCHAR (10)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [PURCHASETYPE]        INT              NOT NULL,
+    [PARMID]              NVARCHAR (20)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [ITEMBUYERGROUPID]    NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [INTERNALINVOICEID]   NVARCHAR (20)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [NUMBERSEQUENCEGROUP] NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [INCLTAX]             INT              NOT NULL,
+    [PAYMDAYID]           NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [DLVTERM]             NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [DLVMODE]             NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [FIXEDDUEDATE]        DATETIME         NOT NULL,
+    [PROFORMA]            INT              NOT NULL,
+    [LANGUAGEID]          NVARCHAR (7)     COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [INVOICEAMOUNTMST]    NUMERIC (28, 12) NOT NULL,
+    [SUMMARKUPMST]        NUMERIC (28, 12) NOT NULL,
+    [DATAAREAID]          NVARCHAR (4)     COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [RECVERSION]          INT              NOT NULL,
+    [RECID]               BIGINT           NOT NULL,
+    [SUMLINEDISC]         NUMERIC (28, 12) NOT NULL,
+    [ENDDISC]             NUMERIC (28, 12) NOT NULL,
+    [RETURNITEMNUM]       NVARCHAR (15)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [TAXROUNDOFF]         NUMERIC (28, 12) NOT NULL,
+    [TAXPRINTONINVOICE]   INT              NOT NULL,
+    [TAXSPECIFYBYLINE]    INT              NOT NULL,
+    [SUMMARKUP]           NUMERIC (28, 12) NOT NULL,
+    [TAXGROUP]            NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [PAYMENTSCHED]        NVARCHAR (30)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [SUMTAX]              NUMERIC (28, 12) NOT NULL,
+    [VATNUM]              NVARCHAR (20)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [ENDDISCMST]          NUMERIC (28, 12) NOT NULL,
+    [REVERSECHARGE_UK]    NUMERIC (28, 12) NOT NULL,
+    [CONTRACTNUM_SA]      NVARCHAR (60)    COLLATE Latin1_General_CI_AS_KS NOT NULL,
+    [INTRASTATDISPATCH]   NVARCHAR (20)    COLLATE Latin1_General_CI_AS_KS NOT NULL
+);
+
+
+GO
+GRANT SELECT
+    ON OBJECT::[dbo].[VENDINVOICEJOUR] TO [CANDY\dherskovich]
+    AS [dbo];
+
+
+GO
+GRANT SELECT
+    ON OBJECT::[dbo].[VENDINVOICEJOUR] TO [CANDY\etlprod]
+    AS [dbo];
+

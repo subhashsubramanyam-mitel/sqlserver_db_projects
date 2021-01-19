@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\eperez] FOR LOGIN [CANDY\eperez];
+

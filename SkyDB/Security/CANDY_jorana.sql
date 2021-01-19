@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\jorana] FOR LOGIN [CANDY\jorana];
+

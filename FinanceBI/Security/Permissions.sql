@@ -1,0 +1,378 @@
+﻿GRANT CONNECT TO [CANDY\administrator];
+
+
+GO
+GRANT CONNECT TO [app_cube];
+
+
+GO
+GRANT EXECUTE TO [app_cube];
+
+
+GO
+GRANT SELECT TO [app_cube];
+
+
+GO
+GRANT CONNECT TO [CANDY\ssas];
+
+
+GO
+GRANT EXECUTE TO [CANDY\ssas];
+
+
+GO
+GRANT SELECT TO [CANDY\ssas];
+
+
+GO
+GRANT CONNECT TO [CANDY\Corpdbadmin];
+
+
+GO
+GRANT CONNECT TO [app_sfdcsync];
+
+
+GO
+GRANT CONNECT TO [CANDY\YKang];
+
+
+GO
+GRANT CONNECT TO [CANDY\tabserver];
+
+
+GO
+GRANT CONNECT TO [CANDY\mrapp];
+
+
+GO
+GRANT EXECUTE TO [CANDY\mrapp];
+
+
+GO
+GRANT SELECT TO [CANDY\mrapp];
+
+
+GO
+GRANT CONNECT TO [CANDY\JKompella];
+
+
+GO
+GRANT CONNECT TO [CANDY\MWoolever];
+
+
+GO
+GRANT CONNECT TO [CANDY\dherskovich];
+
+
+GO
+GRANT CONNECT TO [CANDY\alossing];
+
+
+GO
+GRANT CREATE FUNCTION TO [CANDY\alossing];
+
+
+GO
+GRANT CREATE PROCEDURE TO [CANDY\alossing];
+
+
+GO
+GRANT CREATE TABLE TO [CANDY\alossing];
+
+
+GO
+GRANT CREATE VIEW TO [CANDY\alossing];
+
+
+GO
+GRANT EXECUTE TO [CANDY\alossing];
+
+
+GO
+GRANT SELECT TO [CANDY\alossing];
+
+
+GO
+GRANT VIEW DEFINITION TO [CANDY\alossing];
+
+
+GO
+GRANT CONNECT TO [CANDY\kparker];
+
+
+GO
+GRANT CONNECT TO [CANDY\aparmenter];
+
+
+GO
+GRANT EXECUTE TO [CANDY\aparmenter];
+
+
+GO
+GRANT SELECT TO [CANDY\aparmenter];
+
+
+GO
+GRANT CONNECT TO [Candy\amohandas];
+
+
+GO
+GRANT EXECUTE TO [Candy\amohandas];
+
+
+GO
+GRANT SELECT TO [Candy\amohandas];
+
+
+GO
+GRANT CONNECT TO [CANDY\brobison];
+
+
+GO
+GRANT EXECUTE TO [CANDY\brobison];
+
+
+GO
+GRANT SELECT TO [CANDY\brobison];
+
+
+GO
+GRANT CONNECT TO [Candy\BPaddock];
+
+
+GO
+GRANT EXECUTE TO [Candy\BPaddock];
+
+
+GO
+GRANT SELECT TO [Candy\BPaddock];
+
+
+GO
+GRANT CONNECT TO [CANDY\PKaloti];
+
+
+GO
+GRANT CONNECT TO [app_megasilo];
+
+
+GO
+GRANT EXECUTE TO [app_megasilo];
+
+
+GO
+GRANT VIEW DEFINITION TO [app_megasilo];
+
+
+GO
+GRANT CONNECT TO [CANDY\MBrondum];
+
+
+GO
+GRANT CREATE FUNCTION TO [CANDY\MBrondum];
+
+
+GO
+GRANT CREATE TABLE TO [CANDY\MBrondum];
+
+
+GO
+GRANT CREATE VIEW TO [CANDY\MBrondum];
+
+
+GO
+GRANT EXECUTE TO [CANDY\MBrondum];
+
+
+GO
+GRANT SELECT TO [CANDY\MBrondum];
+
+
+GO
+GRANT VIEW DEFINITION TO [CANDY\MBrondum];
+
+
+GO
+GRANT CONNECT TO [CANDY\beswanson];
+
+
+GO
+GRANT CREATE FUNCTION TO [CANDY\beswanson];
+
+
+GO
+GRANT CREATE TABLE TO [CANDY\beswanson];
+
+
+GO
+GRANT CREATE VIEW TO [CANDY\beswanson];
+
+
+GO
+GRANT EXECUTE TO [CANDY\beswanson];
+
+
+GO
+GRANT SELECT TO [CANDY\beswanson];
+
+
+GO
+GRANT CONNECT TO [CANDY\dtruong];
+
+
+GO
+GRANT CONNECT TO [CANDY\ETLProd];
+
+
+GO
+GRANT CONNECT TO [CANDY\slala];
+
+
+GO
+GRANT CREATE FUNCTION TO [CANDY\slala];
+
+
+GO
+GRANT CREATE PROCEDURE TO [CANDY\slala];
+
+
+GO
+GRANT CREATE TABLE TO [CANDY\slala];
+
+
+GO
+GRANT CREATE VIEW TO [CANDY\slala];
+
+
+GO
+GRANT CONNECT TO [CANDY\AGanti];
+
+
+GO
+GRANT CONNECT TO [CANDY\joh];
+
+
+GO
+GRANT CONNECT TO [CANDY\TAbenova];
+
+
+GO
+GRANT CONNECT TO [CANDY\dorr];
+
+
+GO
+GRANT CREATE FUNCTION TO [CANDY\dorr];
+
+
+GO
+GRANT CREATE PROCEDURE TO [CANDY\dorr];
+
+
+GO
+GRANT CREATE TABLE TO [CANDY\dorr];
+
+
+GO
+GRANT CREATE VIEW TO [CANDY\dorr];
+
+
+GO
+GRANT EXECUTE TO [CANDY\dorr];
+
+
+GO
+GRANT SELECT TO [CANDY\dorr];
+
+
+GO
+GRANT VIEW DEFINITION TO [CANDY\dorr];
+
+
+GO
+GRANT CONNECT TO [CANDY\eabramov];
+
+
+GO
+GRANT EXECUTE TO [CANDY\eabramov];
+
+
+GO
+GRANT SELECT TO [CANDY\eabramov];
+
+
+GO
+GRANT CONNECT TO [CANDY\jkappes];
+
+
+GO
+GRANT EXECUTE TO [CANDY\jkappes];
+
+
+GO
+GRANT SELECT TO [CANDY\jkappes];
+
+
+GO
+GRANT VIEW DEFINITION TO [CANDY\jkappes];
+
+
+GO
+GRANT CONNECT TO [bi_viewer];
+
+
+GO
+GRANT EXECUTE TO [bi_viewer];
+
+
+GO
+GRANT SELECT TO [bi_viewer];
+
+
+GO
+GRANT VIEW DEFINITION TO [bi_viewer];
+
+
+GO
+GRANT CONNECT TO [CANDY\bdavis];
+
+
+GO
+GRANT EXECUTE TO [CANDY\bdavis];
+
+
+GO
+GRANT SELECT TO [CANDY\bdavis];
+
+
+GO
+GRANT VIEW DEFINITION TO [CANDY\bdavis];
+
+
+GO
+GRANT CONNECT TO [CANDY\rspano];
+
+
+GO
+GRANT CONNECT TO [CANDY\CCrider];
+
+
+GO
+GRANT CONNECT TO [app_billing];
+
+
+GO
+GRANT CONNECT TO [app_stafftable];
+
+
+GO
+GRANT CONNECT TO [CANDY\ssubramanyam];
+
+
+GO
+GRANT CONNECT TO [CANDY\wnolan];
+
+
+GO
+GRANT CONNECT TO [app_MiCC];
+

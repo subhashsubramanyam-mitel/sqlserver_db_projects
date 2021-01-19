@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\Finance] FOR LOGIN [CANDY\Finance];
+

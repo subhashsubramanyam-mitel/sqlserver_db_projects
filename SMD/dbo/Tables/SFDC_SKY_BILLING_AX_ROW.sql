@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[SFDC_SKY_BILLING_AX_ROW] (
+    [CustomerPo] NVARCHAR (50) NULL
+);
+

@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [hana]
+    AUTHORIZATION [dbo];
+

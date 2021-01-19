@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\PCrausaz] FOR LOGIN [CANDY\PCrausaz];
+

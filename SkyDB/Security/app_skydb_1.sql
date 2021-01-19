@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [app_skydb]
+    WITH PASSWORD = N'uwueufyvFsvr|qqwlhqt.|nmmsFT7_&#$!~<{mCxg&=x|bSI', SID = 0x963B940A8E73764694E7BCF611F59E66, DEFAULT_DATABASE = [SkyDB], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

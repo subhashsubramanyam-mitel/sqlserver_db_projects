@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[SVY_EXCLUDE] (
+    [SE_ID] VARCHAR (15) NOT NULL
+);
+

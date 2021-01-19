@@ -1,0 +1,18 @@
+﻿ 
+
+CREATE View [dbo].[V_HANA_SIC] as 
+ -- MW 06032020 Bring in Sic From Hana
+ select 
+	  SIC_YSICCODE4	 as SIC4
+	 ,SIC_YSICCODE4_DES	as SIC4Description
+	 ,SIC_YSICCODE3		 as SIC3
+	 ,SIC_YSICCODE3_DES		as SIC3Description
+	 ,SIC_YSICCODE2		 as SIC2
+	 ,SIC_YSICCODE2_DES		as SIC2Description
+	 ,SIC_YSICCODE1		 as SIC1
+	 ,SIC_YSICCODE1_DES		as SIC1Description
+	 ,SIC_YMTLINDUS	as Industry1
+	 ,SIC_YMTLHLIND as Industry2
+	FROM OPENQUERY (BWP,  
+	'select *
+	FROM    "_SYS_BIC"."ZMITEL_BOOKINGS.MASTER_DATA/YMD_CV_SICC" ')

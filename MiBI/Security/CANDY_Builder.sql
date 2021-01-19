@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\Builder] FOR LOGIN [CANDY\Builder];
+

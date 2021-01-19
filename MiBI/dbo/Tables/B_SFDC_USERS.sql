@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[B_SFDC_USERS] (
+    [Id]       VARCHAR (50)  NOT NULL,
+    [Name]     VARCHAR (200) NULL,
+    [Email]    VARCHAR (200) NULL,
+    [RoleName] VARCHAR (255) NULL,
+    CONSTRAINT [PK_B_SFDC_USERS] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

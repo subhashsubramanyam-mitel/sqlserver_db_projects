@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\MGlassman] FOR LOGIN [CANDY\MGlassman];
+

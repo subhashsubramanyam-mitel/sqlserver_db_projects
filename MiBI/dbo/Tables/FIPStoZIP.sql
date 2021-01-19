@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[FIPStoZIP] (
+    [ZipCode] VARCHAR (5) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+    [FIPS]    VARCHAR (5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+);
+

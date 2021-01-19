@@ -1,0 +1,93 @@
+﻿CREATE SCHEMA [PCBI]
+    AUTHORIZATION [dbo];
+
+
+GO
+GRANT ALTER
+    ON SCHEMA::[PCBI] TO [CANDY\aparmenter];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[PCBI] TO [CANDY\aparmenter];
+
+
+GO
+GRANT EXECUTE
+    ON SCHEMA::[PCBI] TO [CANDY\aparmenter];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[PCBI] TO [CANDY\aparmenter];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[PCBI] TO [CANDY\aparmenter];
+
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[PCBI] TO [CANDY\aparmenter];
+
+
+GO
+GRANT ALTER
+    ON SCHEMA::[PCBI] TO [CANDY\rspano];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[PCBI] TO [CANDY\rspano];
+
+
+GO
+GRANT EXECUTE
+    ON SCHEMA::[PCBI] TO [CANDY\rspano];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[PCBI] TO [CANDY\rspano];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[PCBI] TO [CANDY\rspano];
+
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[PCBI] TO [CANDY\rspano];
+
+
+GO
+GRANT ALTER
+    ON SCHEMA::[PCBI] TO [CANDY\wnolan];
+
+
+GO
+GRANT DELETE
+    ON SCHEMA::[PCBI] TO [CANDY\wnolan];
+
+
+GO
+GRANT EXECUTE
+    ON SCHEMA::[PCBI] TO [CANDY\wnolan];
+
+
+GO
+GRANT INSERT
+    ON SCHEMA::[PCBI] TO [CANDY\wnolan];
+
+
+GO
+GRANT SELECT
+    ON SCHEMA::[PCBI] TO [CANDY\wnolan];
+
+
+GO
+GRANT UPDATE
+    ON SCHEMA::[PCBI] TO [CANDY\wnolan];
+

@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[SSC_QCOGS] (
+    [FileStamp] CHAR (25)        NULL,
+    [SKU]       NVARCHAR (20)    NOT NULL,
+    [cogs]      NUMERIC (28, 12) NOT NULL,
+    CONSTRAINT [PK_SSC_QCOGS] PRIMARY KEY CLUSTERED ([SKU] ASC)
+);
+

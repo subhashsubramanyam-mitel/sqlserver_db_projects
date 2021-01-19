@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [CANDY\jsalinas]
+    FROM WINDOWS WITH DEFAULT_DATABASE = [SkyDB], DEFAULT_LANGUAGE = [us_english];
+

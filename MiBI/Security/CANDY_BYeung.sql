@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\BYeung] FOR LOGIN [CANDY\BYeung];
+

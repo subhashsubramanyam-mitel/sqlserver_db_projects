@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [CANDY\brobison]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

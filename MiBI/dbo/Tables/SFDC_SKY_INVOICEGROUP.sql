@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[SFDC_SKY_INVOICEGROUP] (
+    [Created]        DATETIME     CONSTRAINT [DF_SFDC_SKY_INVOICEGROUP_Created] DEFAULT (getdate()) NOT NULL,
+    [InvoiceGroupId] VARCHAR (50) NOT NULL,
+    [ShoretelId]     VARCHAR (50) NULL,
+    [M5dbAccountID]  VARCHAR (50) NULL,
+    CONSTRAINT [PK_SFDC_SKY_INVOICEGROUP] PRIMARY KEY CLUSTERED ([InvoiceGroupId] ASC)
+);
+

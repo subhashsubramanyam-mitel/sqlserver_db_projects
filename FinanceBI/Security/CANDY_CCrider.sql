@@ -1,0 +1,2 @@
+﻿CREATE USER [CANDY\CCrider] FOR LOGIN [CANDY\CCrider];
+

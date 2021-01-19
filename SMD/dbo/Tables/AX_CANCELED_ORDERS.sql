@@ -1,0 +1,4 @@
+﻿CREATE TABLE [dbo].[AX_CANCELED_ORDERS] (
+    [SalesId] NVARCHAR (20) NOT NULL
+);
+
